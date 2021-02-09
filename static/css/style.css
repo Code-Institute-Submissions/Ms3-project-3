@@ -3,3 +3,20 @@ nav .brand-logo {
     padding-left: 20px;
 }
 
+#button1 { 
+    position: absolute; right: 45%; top: 70%;
+    background-color: rgba(255, 20, 20, 0.64);
+    border-radius: 25px;
+}
+
+#button2 {
+    position: absolute; right: 55%; top: 70%;
+    background-color: rgba(255, 20, 20, 0.64);
+    border-radius: 25px;
+}
+
+.h2-front {
+    position: absolute;
+    right: 46%;
+    top: 40%;
+}
