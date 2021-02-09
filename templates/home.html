@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do</title>
+</head>
+<body>
+    {% for todo in todo %}
+        {{ todo.category_name }}<br>
+        {{ todo.todo_name }}<br>
+        {{ todo.todo_description }}<br>
+        {{ todo.is_urgent }}<br>
+        {{ todo.due_date }}<br>
+    {% endfor %}
+</body>
+</html>
