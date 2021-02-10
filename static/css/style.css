@@ -3,20 +3,27 @@ nav .brand-logo {
     padding-left: 20px;
 }
 
-#button1 { 
-    position: absolute; right: 45%; top: 70%;
-    background-color: rgba(255, 20, 20, 0.64);
-    border-radius: 25px;
-}
-
-#button2 {
-    position: absolute; right: 55%; top: 70%;
-    background-color: rgba(255, 20, 20, 0.64);
-    border-radius: 25px;
-}
-
 .h2-front {
     position: absolute;
-    right: 46%;
+    right: 50%;
     top: 40%;
+}
+
+body {
+    background-color: rgba(255, 20, 20, 0.02);
+}
+
+video {
+    height: auto;
+    width: 100%;
+    position: relative;
+}
+
+nav {
+    position: fixed;
+    z-index: 10;
+}
+
+.btn-container {
+    position: absolute;
 }
