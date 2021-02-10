@@ -19,9 +19,14 @@ mongo = PyMongo(app)
 
 @app.route("/")
 @app.route("/get_todo")
-def get_tasks():
+def get_todo():
     todo = mongo.db.todo.find()
     return render_template("home.html", todo=todo)
+
+
+@app.route("/profile", methods=["GET", "POST"])
+def profile():
+    return render_template("profile.html")
 
 
 if __name__ == "__main__":
