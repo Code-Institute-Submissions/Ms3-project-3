@@ -25,5 +25,31 @@ nav {
 }
 
 .btn-container {
-    position: absolute;
+    position: relative;
+    bottom: 55vh;
+}
+
+.btn-container a {
+    margin: 2vh;
+    background-color: rgba(223, 1, 1, 1);
+    border-radius: 10%;
+}
+
+.btn-container a:hover {
+    background-color: rgba(223, 1, 1, 0.8);
+}
+
+.main-image {
+    height: 100vh;
+    width: 100%;
+    background-image: url(../images/business.jpg);
+    background-repeat: no-repeat;
+    top: 0;
+}
+
+.header-page {
+    position: relative;
+    bottom: 60vh;
+    font-size: 50px;
+    font-family: fantasy;
 }
