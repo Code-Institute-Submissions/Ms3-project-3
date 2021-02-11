@@ -85,3 +85,7 @@ nav {
 .container {
     margin: auto;
 }
+
+.flashes h4 {
+    line-height: 2;
+}
