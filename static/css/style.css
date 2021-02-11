@@ -13,14 +13,9 @@ body {
     background-color: rgba(255, 20, 20, 0.02);
 }
 
-video {
-    height: auto;
-    width: 100%;
-    position: relative;
-}
 
 nav {
-    position: sticky;
+    position: fixed;
     z-index: 10;
 }
 
@@ -71,4 +66,22 @@ nav {
     }
 }
 
+.icons-exp-container {
+    font-size: 50px;
+}
 
+.icons-exp-container p {
+    font-size: 20px;
+}
+
+.icons-exp-container i {
+    color: red;
+}
+
+.social-media-container i {
+    color: red;
+}
+
+.container {
+    margin: auto;
+}
