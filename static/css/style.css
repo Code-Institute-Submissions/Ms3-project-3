@@ -1,5 +1,5 @@
 nav .brand-logo {
-    font-size: 2.3rem;
+    font-size: 1.4rem;
     padding-left: 20px;
 }
 
@@ -26,7 +26,7 @@ nav {
 
 .btn-container {
     position: relative;
-    bottom: 55vh;
+    top: 55vh;
 }
 
 .btn-container a {
@@ -45,11 +45,23 @@ nav {
     background-image: url(../images/business.jpg);
     background-repeat: no-repeat;
     top: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.social-media-container {
+    margin-top: 85vh;
+}
+
+.social-media-container i {
+    font-size: 50px;
+    margin: 23px;
 }
 
 .header-page {
     position: relative;
-    bottom: 60vh;
+    top: 40vh;
     font-size: 50px;
     font-family: fantasy;
 }
+
