@@ -20,13 +20,13 @@ video {
 }
 
 nav {
-    position: fixed;
+    position: sticky;
     z-index: 10;
 }
 
 .btn-container {
     position: relative;
-    top: 55vh;
+    top: 30vh;
 }
 
 .btn-container a {
@@ -60,8 +60,15 @@ nav {
 
 .header-page {
     position: relative;
-    top: 40vh;
+    top: 20vh;
     font-size: 50px;
     font-family: fantasy;
 }
+
+@media screen and (min-width: 426px) {
+    .form-container {
+        margin-left: 35%;
+    }
+}
+
 

@@ -43,26 +43,26 @@
 
 
     <!-- Main Headline Title -->
-        <div class="container">
-            <div class="row">
-                <div class="col s12">
-                    <h5 class="center-align header-page">Pocket Calender</h5>
-                </div>
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <h5 class="center-align header-page">Pocket Calender</h5>
             </div>
         </div>
+    </div>
 
     <!-- Main Headline Buttons -->
-        <div class="btn-container">
-            <div class="row">
-                <div class="col s12 center-align">
-                    <a class="waves-effect waves-light btn-large">Sign In</a>
-                    <a class="waves-effect waves-light btn-large">Register</a>
-                </div>
+    <div class="btn-container">
+        <div class="row">
+            <div class="col s12 center-align">
+                <a class="waves-effect waves-light btn-large">Sign In</a>
+                <a class="waves-effect waves-light btn-large">Register</a>
             </div>
         </div>
+    </div>
 
-        <!-- Main Headline Image -->
-        <div class="main-image"></div>
+    <!-- Main Headline Image -->
+    <div class="main-image"></div>
 
     <!-- Main Headline Social Media Icons -->
     <div class="social-media-container">
@@ -80,11 +80,47 @@
         <div class="row">
             <div class="col s12">
                 <h4>Keep track of your to-do list EVERYWERE!</h4>
-                <img class="materialboxed" width="100%" height="auto" src="../static/images/business.jpg">
                 <h5>Are you at home, at work or sitting on the bus. Always keep track of what to do during the day easily with a To-do list that accompanies you wherever you go!</h5>
+                <div class="col l12 s12 center-align">
+                    <img width="100%" height="auto" src="https://media.giphy.com/media/r9OixsRnfHBujrEXZt/giphy.gif" alt="">
+                </div>
             </div>
         </div>
     </div>
+
+    <!-- Contact Form -->
+    <div class="center-align">
+        <h4>Contact</h4>
+    </div>
+    <div class="form-container center-align">
+        <div class="row">
+            <form class="col s12 l12">
+                <div class="row">
+                    <div class="input-field col s12 l3">
+                        <input id="first_name" type="text" class="validate">
+                        <label for="first_name">First Name</label>
+                    </div>
+                    <div class="input-field col s12 l3">
+                        <input id="last_name" type="text" class="validate">
+                        <label for="last_name">Last Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12 l6">
+                        <input id="email" type="email" class="validate">
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12 l6">
+                        <textarea id="textarea1" class="materialize-textarea"></textarea>
+                        <label for="text">Text</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+        
     {% endblock %}
     <!-- Footer -->
         <footer class="page-footer red lighten-1">
