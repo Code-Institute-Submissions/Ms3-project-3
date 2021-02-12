@@ -60,11 +60,6 @@ nav {
     font-family: fantasy;
 }
 
-@media screen and (min-width: 426px) {
-    .form-container {
-        margin-left: 35%;
-    }
-}
 
 .icons-exp-container {
     font-size: 50px;
@@ -89,3 +84,15 @@ nav {
 .flashes h4 {
     line-height: 2;
 }
+
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+

@@ -14,15 +14,15 @@
 <body>
     <header>
     <!-- Navigation -->
-        <nav class="nav-extended">
-            <div class="nav-wrapper navbar-fixed red lighten-1">
+        <nav class="">
+            <div class="nav-wrapper red lighten-1">
                 <a href="#!" class="brand-logo"><i class="fas fa-calendar-week"></i></a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('get_todo') }}">Home</a></li>
-                    <li><a href="{{ url_for('profile') }}">Profile</a></li>
+                    <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                     <li><a href="{{ url_for('login') }}">Log In</a></li>
-                    <li><a href="#">Sign Out</a></li>
+                    <li><a href="#">Log Out</a></li>
                     <li><a href="{{ url_for('register') }}">Register</a></li>
                 </ul>
             </div>
@@ -30,9 +30,9 @@
     <!-- Mobile Navigation -->
         <ul class="sidenav" id="mobile-demo">
             <li><a href="{{ url_for('get_todo') }}">Home</a></li>
-            <li><a href="{{ url_for('profile') }}">Profile</a></li>
+            <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
             <li><a href="{{ url_for('login') }}">Log In</a></li>
-            <li><a href="#">Sign Out</a></li>
+            <li><a href="#">Log Out</a></li>
             <li><a href="{{ url_for('register') }}">Register</a></li>
         </ul>
     </header>
@@ -60,7 +60,7 @@
     <div class="container">
         <div class="row">
             <div class="col s12">
-                <h5 class="center-align header-page">Pocket Calender</h5>
+                <h3 class="center-align header-page">Pocket Calender</h3>
             </div>
         </div>
     </div>
@@ -69,8 +69,8 @@
     <div class="btn-container">
         <div class="row">
             <div class="col s12 center-align">
-                <a class="waves-effect waves-light btn-large">Sign In</a>
-                <a class="waves-effect waves-light btn-large">Register</a>
+                <a href="{{ url_for('register') }}" class="waves-effect waves-light btn-large">Log In</a>
+                <a href="{{ url_for('register') }}" class="waves-effect waves-light btn-large">Register</a>
             </div>
         </div>
     </div>
@@ -94,7 +94,7 @@
         <div class="row">
             <div class="col s12">
                 <h4>Keep track of your calender EVERYWERE!</h4>
-                <h5>Are you at home, at work or sitting on the bus. Always keep track of what to do during the day easily with a To-do list that accompanies you wherever you go!</h5>
+                <p>Are you at home, at work or sitting on the bus. Always keep track of what to do during the day easily with a To-do list that accompanies you wherever you go!</p>
                 <div class="col s12 center-align">
                     <img class="responsive-img" src="https://media.giphy.com/media/r9OixsRnfHBujrEXZt/giphy.gif" alt="">
                 </div>
@@ -125,35 +125,36 @@
     <!-- Contact Form -->
     <div class="center-align">
         <h4>Contact</h4>
-    </div>
-    <div class="form-container center-align">
+<div class="row">
+    <form class="col s12 m8 offset-m2">
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="first_name" type="text" class="validate">
+          <label for="first_name">First Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="last_name" type="text" class="validate">
+          <label for="last_name">Last Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate">
+          <label for="email">Email</label>
+        </div>
+      </div>
         <div class="row">
-            <form class="col s12 l12">
-                <div class="row">
-                    <div class="input-field col s12 l3">
-                        <input id="first_name" type="text" class="validate">
-                        <label for="first_name">First Name</label>
-                    </div>
-                    <div class="input-field col s12 l3">
-                        <input id="last_name" type="text" class="validate">
-                        <label for="last_name">Last Name</label>
-                    </div>
+            <form class="col s12">
+            <div class="row">
+                <div class="input-field col s12">
+                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                <label for="textarea1">Textarea</label>
                 </div>
-                <div class="row">
-                    <div class="input-field col s12 l6">
-                        <input id="email" type="email" class="validate">
-                        <label for="email">Email</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12 l6">
-                        <textarea id="textarea1" class="materialize-textarea"></textarea>
-                        <label for="text">Text</label>
-                    </div>
-                </div>
+            </div>
             </form>
         </div>
-    </div>
+    </form>
+  </div>
         
     {% endblock %}
     <!-- Footer -->
