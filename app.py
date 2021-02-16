@@ -18,11 +18,16 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+@app.route("/home")
+def home():
+    return render_template("home.html")
+
+
 @app.route("/")
-@app.route("/get_todo")
-def get_todo():
-    todo = mongo.db.todo.find()
-    return render_template("home.html", todo=todo)
+@app.route("/get_notes")
+def get_notes():
+    notes = mongo.db.notes.find()
+    return render_template("profile.html", notes=notes)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -87,6 +92,7 @@ def profile(username):
         return render_template("profile.html", username=username)
 
     return redirect(url_for("login"))
+
 
 
 @app.route("/logout")

@@ -1,15 +1,27 @@
 {% extends "home.html" %}
 {% block content %}
 
-      <div class="row">
-    <div class="col s12 m4 offset-m2">
-      <div class="card-panel teal">
-        <span class="white-text">I am a very simple card. I am good at containing small bits of information.
-        I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
-        </span>
-      </div>
-    </div>
-  </div>
-  
+    {% for note in notes %}
+        {{ note.note_name }}<br>
+        {{ note.description_name }}<br>
+        {{ note.is_urgent }}<br>
+        {{ note.due_date }}<br>
+    {% endfor %}
+
+    <ul class="collapsible popout">
+        <li>
+        <div class="collapsible-header"><i class="fas fa-chevron-down"></i>First</div>
+        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        </li>
+        <li>
+        <div class="collapsible-header"><i class="fas fa-chevron-down"></i>Second</div>
+        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        </li>
+        <li>
+        <div class="collapsible-header"><i class="fas fa-chevron-down"></i>Third</div>
+        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        </li>
+    </ul>
+
 
 {% endblock %}
