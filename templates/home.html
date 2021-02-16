@@ -9,14 +9,14 @@
     <!-- Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <title>Pocket Calender</title>
+    <title>NoteBook</title>
 </head>
 <body>
     <header>
     <!-- Navigation -->
-        <nav class="">
+        <nav>
             <div class="nav-wrapper red lighten-1">
-                <a href="#!" class="brand-logo"><i class="fas fa-calendar-week"></i></a>
+                <a href="#!" class="brand-logo"><i class="fas fa-calendar-week"></i>NoteBook</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('get_todo') }}">Home</a></li>
@@ -49,7 +49,7 @@
             {% if messages %}
                 {% for message in messages %}
                     <div class="row flashes">
-                        <h4 class="red center-align">{{ message }}</h4>
+                        <h4 class="center-align">{{ message }}</h4>
                     </div>
                 {% endfor %}
             {% endif %}
@@ -65,8 +65,8 @@
     <!-- Main Headline Title -->
     <div class="container">
         <div class="row">
-            <div class="col s12">
-                <h3 class="center-align header-page">Pocket Calender</h3>
+            <div class="col s8 offset-m2">
+                <h3 class="center-align header-page">NoteBook</h3>
             </div>
         </div>
     </div>
@@ -75,7 +75,7 @@
     <div class="btn-container">
         <div class="row">
             <div class="col s12 center-align">
-                <a href="{{ url_for('register') }}" class="waves-effect waves-light btn-large">Log In</a>
+                <a href="{{ url_for('login') }}" class="waves-effect waves-light btn-large">Log In</a>
                 <a href="{{ url_for('register') }}" class="waves-effect waves-light btn-large">Register</a>
             </div>
         </div>
@@ -108,8 +108,6 @@
         </div>
     </div>
 
-    <br>
-
     <!-- User experience section -->
     <div class="icons-exp-container center-align">
         <div class="row">
@@ -130,56 +128,48 @@
 
     <!-- Contact Form -->
     <div class="center-align">
-        <h4>Contact</h4>
+        <h4>Contact Me</h4>
     </div>
-<div class="row">
-    <form class="col s12 m8 offset-m2">
-      <div class="row">
-        <div class="input-field col s6">
-          <input id="first_name" type="text" class="validate">
-          <label for="first_name">First Name</label>
-        </div>
-        <div class="input-field col s6">
-          <input id="last_name" type="text" class="validate">
-          <label for="last_name">Last Name</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="email" type="email" class="validate">
-          <label for="email">Email</label>
-        </div>
-      </div>
-        <div class="row">
-            <form class="col s12">
+    <div class="row">
+        <form class="col s8 m8 offset-m2 offset-s2 card-panel">
             <div class="row">
-                <div class="input-field col s12">
-                <textarea id="textarea1" class="materialize-textarea"></textarea>
-                <label for="textarea1">Textarea</label>
+                <div class="input-field col s6">
+                    <input id="first_name" type="text" class="validate">
+                    <label for="first_name">First Name</label>
+                </div>
+                <div class="input-field col s6">
+                    <input id="last_name" type="text" class="validate">
+                    <label for="last_name">Last Name</label>
                 </div>
             </div>
-            </form>
-        </div>
-    </form>
-  </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="email" type="email" class="validate">
+                    <label for="email">Email</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea id="textarea1" class="materialize-textarea"></textarea>
+                    <label for="textarea1">Textarea</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="center-align send-btn">
+                    <button class="btn-large waves-effect red" type="submit" name="action">
+                        <i class="fas fa-paper-plane"></i>Submit
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
         
     {% endblock %}
     <!-- Footer -->
-        <footer class="page-footer red lighten-1">
-          <div class="container center-align">
-            <div class="row">
-              <div class="col l12 s12">
-                <h5 class="white-text">Footer Content</h5>
-                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-              </div>
-            </div>
-          </div>
-          <div class="footer-copyright">
-            <div class="container center-align">
-            © 2021 Copyright
-            </div>
-          </div>
-        </footer>
+    <div class="footer-container center-align">
+    <h5>© 2021 Copyright</h5>
+    </div>
+        
 
 
 

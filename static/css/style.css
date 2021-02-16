@@ -9,14 +9,12 @@ nav .brand-logo {
     top: 40%;
 }
 
-body {
-    background-color: rgba(255, 20, 20, 0.02);
+html {
+    filter: drop-shadow(8px 8px 10px grey);
 }
 
-
 nav {
-    position: fixed;
-    z-index: 10;
+    top: 0;
 }
 
 .btn-container {
@@ -83,16 +81,14 @@ nav {
 
 .flashes h4 {
     line-height: 2;
+    top: 100px;
 }
 
-  body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
 
-  main {
-    flex: 1 0 auto;
-  }
+.footer-container {
+    bottom: 10px;
+}
 
-
+.send-btn i {
+    margin-right: 10px;
+}
