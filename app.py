@@ -33,7 +33,7 @@ def get_notes():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
-        #check username
+        # check username
         existing_user = mongo.db.user.find_one(
             {"username": request.form.get("username").lower()})
 
@@ -94,7 +94,6 @@ def profile(username):
     return redirect(url_for("login"))
 
 
-
 @app.route("/logout")
 def logout():
     flash("You have been logged out")
@@ -102,8 +101,21 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/add_note")
+@app.route("/add_note", methods=["GET", "POST"])
 def add_note():
+    if request.method == "POST":
+        is_urgent = "on" if request.form.get("is_urgent") else "off"
+        note = {
+            "note_name": request.form.get("note_name"),
+            "note_description": request.form.get("note_description"),
+            "due_date": request.form.get("due_date"),
+            "is_urgent": is_urgent,
+            "created_by": session["user"]
+        }
+        mongo.db.notes.insert_one(note)
+        flash("Note Noted!")
+        return redirect(url_for("get_notes"))
+
     return render_template("add_notes.html")
 
 

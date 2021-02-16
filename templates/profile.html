@@ -16,7 +16,8 @@
             </div>
             <div class="collapsible-body">
                 <strong>{{ note.category_name }}</strong>
-                <p>{{ note.description_name }}</p>
+                <p>{{ note.note_description }}</p>
+                <p><em>by:{{ note.created_by }}</em></p>
             </div>
         </li>
         {% endfor %}
