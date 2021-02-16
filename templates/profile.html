@@ -1,26 +1,24 @@
 {% extends "home.html" %}
 {% block content %}
 
-    {% for note in notes %}
-        {{ note.note_name }}<br>
-        {{ note.description_name }}<br>
-        {{ note.is_urgent }}<br>
-        {{ note.due_date }}<br>
-    {% endfor %}
 
     <ul class="collapsible popout">
+        {% for note in notes %}
         <li>
-        <div class="collapsible-header"><i class="fas fa-chevron-down"></i>First</div>
-        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+            <div class="collapsible-header">
+                <i class="fas fa-chevron-down"></i>
+                <strong>{{ note.note_name }}</strong> : {{ note.due_date }}
+                {% if note.is_urgent == "on" %}
+                    <i class="fas fa-exclamation-circle light-blue-text text-lighten-2 tooltipped"
+                        data-position="right" data-tooltip="Urgent"></i>
+                {% endif %}
+            </div>
+            <div class="collapsible-body">
+                <strong>{{ note.category_name }}</strong>
+                <p>{{ note.description_name }}</p>
+            </div>
         </li>
-        <li>
-        <div class="collapsible-header"><i class="fas fa-chevron-down"></i>Second</div>
-        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-        <div class="collapsible-header"><i class="fas fa-chevron-down"></i>Third</div>
-        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
+        {% endfor %}
     </ul>
 
 
