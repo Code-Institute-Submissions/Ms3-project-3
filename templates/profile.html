@@ -2,26 +2,29 @@
 {% block content %}
 
     <h3 class="center-align">All Notes</h3>
-
-    <ul class="collapsible popout">
-        {% for note in notes %}
-        <li>
-            <div class="collapsible-header">
-                <i class="fas fa-chevron-down"></i>
-                <strong>{{ note.note_name }}</strong> : {{ note.due_date }}
-                {% if note.is_urgent == "on" %}
-                    <i class="fas fa-exclamation-circle light-blue-text text-lighten-2 tooltipped"
-                        data-position="right" data-tooltip="Urgent"></i>
-                {% endif %}
-            </div>
-            <div class="collapsible-body">
-                <strong>{{ note.category_name }}</strong>
-                <p>{{ note.note_description }}</p>
-                <p><em>by:{{ note.created_by }}</em></p>
-            </div>
-        </li>
-        {% endfor %}
-    </ul>
+<div class="row">
+    <div class="col s8 m8 offset-m2 offset-s2">
+        <ul class="collapsible popout">
+            {% for note in notes %}
+            <li>
+                <div class="collapsible-header">
+                    <i class="fas fa-chevron-down"></i>
+                    <strong>{{ note.note_name }}</strong> : {{ note.due_date }}
+                    {% if note.is_urgent == "on" %}
+                        <i class="fas fa-exclamation-circle light-blue-text text-lighten-2 tooltipped"
+                            data-position="right" data-tooltip="Urgent"></i>
+                    {% endif %}
+                </div>
+                <div class="collapsible-body">
+                    <strong>{{ note.category_name }}</strong>
+                    <p>{{ note.note_description }}</p>
+                    <p><em>by:{{ note.created_by }}</em></p>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
 
 
 {% endblock %}
