@@ -1,20 +1,32 @@
-nav .brand-logo {
+#navbar {
+    background: transparent;
+    position: fixed; 
+    top: -70px;
+    width: 100%; 
+    transition: top 0.5s; 
+    z-index: 10000;
+}
+
+nav ul a {
+    -webkit-transition: background-color .3s;
+    transition: background-color .3s;
     font-size: 1.4rem;
+    color: black;
+    display: block;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+nav .brand-logo {
+    font-size: 3rem;
     padding-left: 20px;
+    color: black;
 }
 
 .h2-front {
     position: absolute;
     right: 50%;
     top: 40%;
-}
-
-html {
-    filter: drop-shadow(8px 8px 10px grey);
-}
-
-nav {
-    top: 0;
 }
 
 .btn-container {
@@ -35,15 +47,11 @@ nav {
 .main-image {
     height: 100vh;
     width: 100%;
-    background-image: url(../images/business.jpg);
     background-repeat: no-repeat;
     top: 0;
     position: absolute;
     z-index: -1;
-}
-
-.social-media-container {
-    margin-top: 85vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000000 100%), url(../images/business.jpg);
 }
 
 .social-media-container i {
@@ -51,11 +59,29 @@ nav {
     margin: 23px;
 }
 
-.header-page {
+.header-container p {
     position: relative;
     top: 20vh;
-    font-size: 50px;
+    font-size: 30px;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header-container h3 {
+    position: relative;
+    top: 20vh;
+    font-size: 120px;
     font-family: fantasy, sans-serif;
+      background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media screen and (max-width: 600px) {
+.header-container h3 {
+    font-size: 60px;
+    }
 }
 
 .icons-exp-container {
@@ -71,7 +97,7 @@ nav {
 }
 
 .social-media-container i {
-    color: red;
+    color: white;
 }
 
 .container {
@@ -83,10 +109,30 @@ nav {
     top: 100px;
 }
 
-.footer-container {
-    bottom: 10px;
+.footer-container h5 {
+    padding-bottom: 10px;
+    color: white;
 }
 
 .send-btn i {
     margin-right: 10px;
+}
+
+.form-container {
+    margin-top: 80vh;
+}
+
+body {
+    background-color: black;
+    height: 100%;
+    width: 100%;
+}
+
+html {
+    width: auto;
+    height: -webkit-fill-available;
+}
+
+.form-container h2 {
+    color: white;
 }
