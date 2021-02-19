@@ -1,3 +1,20 @@
+.container {
+    margin: auto;
+}
+
+body {
+    background-color: black;
+    height: 100%;
+    width: 100%;
+}
+
+html {
+    width: auto;
+    height: -webkit-fill-available;
+}
+
+/* Navigation */
+
 #navbar {
     background: transparent;
     position: fixed; 
@@ -11,7 +28,7 @@ nav ul a {
     -webkit-transition: background-color .3s;
     transition: background-color .3s;
     font-size: 1.4rem;
-    color: black;
+    color: white;
     display: block;
     padding: 0 15px;
     cursor: pointer;
@@ -20,8 +37,10 @@ nav ul a {
 nav .brand-logo {
     font-size: 3rem;
     padding-left: 20px;
-    color: black;
+    color: white;
 }
+
+/* Home Page */
 
 .h2-front {
     position: absolute;
@@ -29,20 +48,29 @@ nav .brand-logo {
     top: 40%;
 }
 
+/* Buttons */
+
 .btn-container {
     position: relative;
-    top: 30vh;
+    top: 20vh;
 }
 
 .btn-container a {
     margin: 2vh;
-    background-color: rgba(223, 1, 1, 1);
+    background-color: rgba(0, 0, 0, 0.7);
     border-radius: 10%;
+    font-size: 20px;
 }
 
 .btn-container a:hover {
-    background-color: rgba(223, 1, 1, 0.8);
+    background-color: rgba(0, 0, 0, 1);
 }
+
+.send-btn i {
+    margin-right: 10px;
+}
+
+/* Background image */
 
 .main-image {
     height: 100vh;
@@ -54,10 +82,7 @@ nav .brand-logo {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000000 100%), url(../images/business.jpg);
 }
 
-.social-media-container i {
-    font-size: 50px;
-    margin: 23px;
-}
+/* Header */
 
 .header-container p {
     position: relative;
@@ -92,47 +117,35 @@ nav .brand-logo {
     font-size: 20px;
 }
 
-.icons-exp-container i {
-    color: red;
-}
-
-.social-media-container i {
-    color: white;
-}
-
-.container {
-    margin: auto;
-}
+/* Flashes */
 
 .flashes h4 {
     line-height: 2;
     top: 100px;
 }
 
-.footer-container h5 {
-    padding-bottom: 10px;
-    color: white;
-}
+/* Form container */
 
-.send-btn i {
-    margin-right: 10px;
+.form-container h2 {
+    color: white;
 }
 
 .form-container {
     margin-top: 80vh;
 }
 
-body {
-    background-color: black;
-    height: 100%;
-    width: 100%;
+/* Footer */
+
+.social-media-container i {
+    font-size: 50px;
+    margin: 23px;
 }
 
-html {
-    width: auto;
-    height: -webkit-fill-available;
+.social-media-container i {
+    color: white;
 }
 
-.form-container h2 {
+.footer-container h5 {
+    padding-bottom: 10px;
     color: white;
 }
