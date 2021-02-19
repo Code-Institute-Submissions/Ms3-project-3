@@ -1,13 +1,13 @@
 .container {
     margin: auto;
 }
-
+/*
 body {
     background-color: black;
     height: 100%;
     width: 100%;
 }
-
+*/
 html {
     width: auto;
     height: -webkit-fill-available;
