@@ -28,7 +28,7 @@ def home():
 def register():
     if request.method == "POST":
         # check username
-        existing_user = mongo.db.user.find_one(
+        existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
         if existing_user:

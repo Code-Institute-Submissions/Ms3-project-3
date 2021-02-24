@@ -1,33 +1,33 @@
 {% extends "home.html" %}
 {% block content %}
 
-    <h3 class="white-text center-align">All Notes</h3>
+    <h1 class="white-text center-align">All Notes</h1>
 
-    <div class="notes-img"></div>
+    <div class="main-image"></div>
 
-<div class="row">
-    <div class="col s10 m8 offset-m2 offset-s1">
-        <ul class="collapsible popout">
-            {% for note in notes %}
-            <li>
-                <div class="collapsible-header">
-                    <i class="fas fa-chevron-down"></i>
-                    <strong>{{ note.note_name }}</strong> : {{ note.due_date }}
-                    {% if note.is_urgent == "on" %}
-                        <i class="fas fa-exclamation-circle light-blue-text text-lighten-2 tooltipped"
-                            data-position="right" data-tooltip="Urgent"></i>
-                    {% endif %}
-                </div>
-                <div class="collapsible-body">
-                    <strong>{{ note.category_name }}</strong>
-                    <p>{{ note.note_description }}</p>
-                    <p><em>by:{{ note.created_by }}</em></p>
-                </div>
-            </li>
-            {% endfor %}
-        </ul>
+    <div class="row">
+        <div class="col s10 m8 offset-m2 offset-s1">
+            <ul class="collapsible popout">
+                {% for note in notes %}
+                <li>
+                    <div class="collapsible-header">
+                        <i class="fas fa-chevron-down"></i>
+                        <strong>{{ note.note_name }}</strong> : {{ note.due_date }}
+                        {% if note.is_urgent == "on" %}
+                            <i class="fas fa-exclamation-circle light-blue-text text-lighten-2 tooltipped"
+                                data-position="right" data-tooltip="Urgent"></i>
+                        {% endif %}
+                    </div>
+                    <div class="collapsible-body">
+                        <strong>{{ note.category_name }}</strong>
+                        <p>{{ note.note_description }}</p>
+                        <p><em>by:{{ note.created_by }}</em></p>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
-</div>
 
 
 {% endblock %}

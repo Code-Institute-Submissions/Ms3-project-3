@@ -9,6 +9,7 @@
     <!-- Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" type="image/x-icon" href="" />
     <title>NoteBook</title>
 </head>
 <body>
@@ -70,7 +71,7 @@
     <div class="header-container">
         <div class="row">
             <div class="col m12 s12">
-                <h3 class="center-align header-page">NoteBook</h3>
+                <h3 class="center-align header-page">NB.</h3>
                 <p class="center-align"><strong>Keep an eye on what you should do.</strong></p>
             </div>
         </div>
@@ -79,7 +80,7 @@
     <!-- Main Headline Buttons -->
     <div class="btn-container">
         <div class="row">
-            <div class="col s12 center-align">
+            <div id="btn-home" class="col s12 center-align">
                 <a href="{{ url_for('login') }}" class="waves-effect waves-light btn-large">Log In</a>
                 <a href="{{ url_for('register') }}" class="waves-effect waves-light btn-large">Register</a>
             </div>
@@ -89,6 +90,12 @@
     <!-- Main Headline Image -->
     <div class="main-image"></div>
 
+    <!-- https://codepen.io/postor/pen/mskxI -->
+    <svg class="arrows">
+        <path class="a1" d="M0 0 L30 32 L60 0"></path>
+        <path class="a2" d="M0 20 L30 52 L60 20"></path>
+        <path class="a3" d="M0 40 L30 72 L60 40"></path>
+    </svg>
 
     <!-- Contact Form -->
 <section class="form-container">

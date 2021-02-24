@@ -1,7 +1,10 @@
 {% extends "home.html" %}
 {% block content %}
 
-    <h3 class="center-align">New Note</h3>
+    <h1 class="white-text center-align">New Note</h1>
+
+    <div class="main-image"></div>
+    
     <!-- Note -->
     <div class="row">
         <form class="col s8 m8 offset-m2 offset-s2 card-panel" method="POST" action="{{ url_for('add_note') }}">
