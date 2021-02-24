@@ -20,16 +20,11 @@ html {
 
 #navbar {
     background: rgba(214, 81, 81, 0.6);
-    position: fixed; 
-    top: -70px;
     width: 100%; 
-    transition: top 0.5s; 
     z-index: 10000;
 }
 
 nav ul a {
-    -webkit-transition: background-color .3s;
-    transition: background-color .3s;
     font-size: 1.4rem;
     color: white;
     display: block;
@@ -59,10 +54,10 @@ nav .brand-logo {
 }
 
 .btn-container a {
-    margin: 2vh;
+    margin: 1vh;
     background-color: rgba(214, 81, 81, 1);
     border-radius: 10%;
-    font-size: 30px;
+    font-size: 16px;
 }
 
 .btn-container a:hover {
@@ -186,6 +181,23 @@ nav .brand-logo {
 
 .register-container p {
     font-size: 30px;
+}
+
+.collapsible-header {
+    padding: 2rem;
+    background-color: rgba(214, 81, 81, 0.9);
+    border-bottom: none;
+    color: white;
+}
+
+.collapsible-body {
+    background-color: rgba(214, 81, 81, 0.49);
+    border-bottom: none;
+    color: white;
+}
+
+.collapsible-body p {
+    font-size: 16px;
 }
 
 /* https://codepen.io/postor/pen/mskxI */
