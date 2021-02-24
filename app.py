@@ -99,7 +99,7 @@ def profile(username):
 @app.route("/get_notes")
 def get_notes():
     notes = mongo.db.notes.find()
-    return render_template("profile.html", notes=notes)
+    return render_template("notes.html", notes=notes)
 
 
 @app.route("/logout")

@@ -1,13 +1,13 @@
 .container {
     margin: auto;
 }
-/*
+
 body {
     background-color: black;
     height: 100%;
     width: 100%;
 }
-*/
+
 html {
     width: auto;
     height: -webkit-fill-available;
@@ -82,6 +82,32 @@ nav .brand-logo {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000000 100%), url(../images/business.jpg);
 }
 
+.notes-img {
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: -1;
+    background: url(../images/book.jpg);
+}
+
+.profile-img {
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: -1;
+    background: url(../images/board.jpg);
+    top: 0;
+}
+
+#profile-picture img {
+    padding-left: 0%;
+    left: 41%;
+    border-radius: 25%;
+    margin-top: 5%;
+}
+
 /* Header */
 
 .header-container p {
@@ -117,6 +143,11 @@ nav .brand-logo {
     font-size: 20px;
 }
 
+#login-header {
+    padding-top: 50px;
+    font-size: 50px;
+}
+
 /* Flashes */
 
 .flashes h4 {
@@ -148,4 +179,10 @@ nav .brand-logo {
 .footer-container h5 {
     padding-bottom: 10px;
     color: white;
+}
+
+/* diverse */
+
+.collapsible-body {
+    background-color: white;
 }

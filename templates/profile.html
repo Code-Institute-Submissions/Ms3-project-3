@@ -1,30 +1,15 @@
 {% extends "home.html" %}
 {% block content %}
 
-    <h3 class="center-align">All Notes</h3>
-<div class="row">
-    <div class="col s10 m8 offset-m2 offset-s1">
-        <ul class="collapsible popout">
-            {% for note in notes %}
-            <li>
-                <div class="collapsible-header">
-                    <i class="fas fa-chevron-down"></i>
-                    <strong>{{ note.note_name }}</strong> : {{ note.due_date }}
-                    {% if note.is_urgent == "on" %}
-                        <i class="fas fa-exclamation-circle light-blue-text text-lighten-2 tooltipped"
-                            data-position="right" data-tooltip="Urgent"></i>
-                    {% endif %}
-                </div>
-                <div class="collapsible-body">
-                    <strong>{{ note.category_name }}</strong>
-                    <p>{{ note.note_description }}</p>
-                    <p><em>by:{{ note.created_by }}</em></p>
-                </div>
-            </li>
-            {% endfor %}
-        </ul>
+    <h3 class="profile-header white-text center-align">Profile</h3>
+
+    <div class="profile-img"></div>
+
+    <div class="center-align" id="profile-picture">
+        <img class="materialboxed" width="320" height="240" src="../static/images/bald-eagle.jpg">
     </div>
-</div>
+
+
 
 
 {% endblock %}
