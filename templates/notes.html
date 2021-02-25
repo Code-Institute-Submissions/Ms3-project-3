@@ -21,8 +21,16 @@
                     </div>
                     <div class="collapsible-body">
                         <strong>{{ note.category_name }}</strong>
-                        <p>{{ note.note_description }}</p>
-                        <p><em>by: {{ note.created_by }}</em></p>
+                            <p>{{ note.note_description }}</p>
+                            <p><em>by: {{ note.created_by }}</em></p>
+                        {% if session.user|lower == note.created_by|lower %}
+                            <button class="waves-effect waves-light btn">
+                                <a class="white-text" href="{{ url_for('edit_note', note_id=note._id) }}">Edit</a>
+                            </button>
+                            <button class="waves-effect waves-light btn">
+                                <a class="white-text" href="#">Delete</a>
+                            </button>
+                        {% endif %}
                     </div>
                 </li>
                 {% endfor %}

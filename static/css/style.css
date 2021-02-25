@@ -200,6 +200,12 @@ nav .brand-logo {
     font-size: 16px;
 }
 
+.collapsible-body button {
+    background-color: rgba(214, 81, 81, 0.8);
+    border-bottom: none;
+    color: white;
+}
+
 /* https://codepen.io/postor/pen/mskxI */
 
 .arrows {

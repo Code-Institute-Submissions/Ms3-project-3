@@ -126,6 +126,24 @@ def add_note():
     return render_template("add_notes.html")
 
 
+@app.route("/edit_note/<note_id>", methods=["GET", "POST"])
+def edit_note(note_id):
+    if request.method == "POST":
+        is_urgent = "on" if request.form.get("is_urgent") else "off"
+        submit = {
+            "note_name": request.form.get("note_name"),
+            "note_description": request.form.get("note_description"),
+            "due_date": request.form.get("due_date"),
+            "is_urgent": is_urgent,
+            "created_by": session["user"]
+        }
+        mongo.db.notes.update({"_id": ObjectId(note_id)}, submit)
+        flash("Note Updated!")
+
+    note = mongo.db.notes.find_one({"_id": ObjectId(note_id)})
+    return render_template("edit_note.html", note=note)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
