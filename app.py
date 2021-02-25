@@ -144,6 +144,13 @@ def edit_note(note_id):
     return render_template("edit_note.html", note=note)
 
 
+@app.route("/delete_note/<note_id>")
+def delete_note(note_id):
+    mongo.db.notes.remove({"_id": ObjectId(note_id)})
+    flash("Note Deleted!")
+    return redirect(url_for("get_notes"))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
