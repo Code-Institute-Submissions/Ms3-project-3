@@ -50,7 +50,7 @@ nav .brand-logo {
 
 .btn-container {
     position: relative;
-    top: 20vh;
+    top: 15vh;
 }
 
 .btn-container a {
@@ -72,6 +72,19 @@ nav .brand-logo {
     background-color: rgba(214, 81, 81, 1);
     border-radius: 10%;
     font-size: 20px;
+    font-family: "Montserrat";
+}
+
+#general-btn {
+    background-color: rgba(214, 81, 81, 1);
+    border-radius: 10%;
+    font-size: 20px;
+    font-family: "Montserrat";
+}
+
+#edit-btn, #cancel-btn {
+    background-color: rgba(214, 81, 81, 1);
+    border-radius: 10%;
     font-family: "Montserrat";
 }
 
@@ -114,14 +127,14 @@ nav .brand-logo {
 
 .header-container p {
     position: relative;
-    top: 20vh;
+    top: 15vh;
     font-size: 30px;
     color: white;
 }
 
 .header-container h3 {
     position: relative;
-    top: 20vh;
+    top: 15vh;
     font-size: 140px;
     color: white;
 }
@@ -204,6 +217,10 @@ nav .brand-logo {
     background-color: rgba(214, 81, 81, 0.8);
     border-bottom: none;
     color: white;
+}
+
+.card-panel {
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 /* https://codepen.io/postor/pen/mskxI */
