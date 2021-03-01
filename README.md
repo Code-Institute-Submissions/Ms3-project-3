@@ -1,8 +1,8 @@
-# MS2-PROJECT-SimonGame
+# MS3-PROJECT-NoteBook
 
 ---
 
-[View the live project here]()
+[View the live project here](https://ms3-project-to-do.herokuapp.com/)
 
 
 ---
@@ -16,8 +16,7 @@
 * [Design](#design)
 * [Testing](#testing)
 * [Technologies](#technologies)
-* [Code](#code/sources)
-* [Commits](#commits)
+* [Credits](#credits)
 * [Deployment](#deployment)
 * [Contact](#Contact)
 
@@ -29,35 +28,58 @@
 
 ---
 
-# UX
+## User Experiance (UX)
 
-#  User stories
+## User stories
+
+*  First Time Visitor Goals
+
+    * As a First Time Visitor, I want to easily understand the main purpose of the site.
+    * As a First Time Visitor, I want to be able to easily navigate throughout the site to find content.
+    * As a First Time Visitor
+
+* Returning Visitor Goals
+    * As a Returning Visitor
+    * As a Returning Visitor
+    * As a Returning Visitor
+
+*  Frequent User Goals
+    * As a Frequent User
+    * As a Frequent User
+    * As a Frequent User
 
 
-##  First Time Visitor Goals
+## Features
 
+* Existing Features
+    * Design
+        * An attractive and simple layout.
+        * Simple navigation throughout the website by using the navigation bar.
+    
+    * General
+        * There are links to the social media platforms at the bottom of the website.
+        * 
+    
+    * Register, login and logout
+        * User can create a new account on the web application.
+        * User can login with their existing accounts.
+        * User can easily log out.
+        * If a user creates a new account, logs in or logs out, a flashed message will appear with the action the person has done.
 
-## Returning Visitor Goals
-
-
-##  Frequent User Goals
-
-
-# Features
-
-## Existing Features
-
-
-## Feature ideas to Implement
-
+* Feature ideas to Implement
+    * Features to implement...
 
 ---
 
 # Design
 
 * ## Colour Scheme
+    * ### The main colors i used for this website is:
+        * rgba(220, 106, 106, 1) a coral based color
+        * White color for the texts
 
 * ## Typography
+    * The Montserrat font is the main font used throughout the whole website with Sans Serif as the fallback font in case for any reason the font isn't being imported into the site correctly. Montserrat is a clean font used frequently in programming, so it is both attractive and appropriate.
 
 * ## Wireframes 
 
@@ -67,10 +89,14 @@
 
 ### My methods for testing my webpage consisted of:
 
+* Chrome DevTools is used to detect problems and test responsiveness.
+* W3C Markup Validation Service
+    * The W3C Markup Validation Service is used to check whether there were any errors in the HTML5 code.
+* W3C CSS validator
+    * The W3C CSS validator is used to check whether there were any errors in the CSS3 code.
+* PEP8
+    * The PEP8 validator is used to check whether there were any errors in the Python code.
 
-
-    * [W3C Markup Validator](https://validator.w3.org/)
-    * [W3C CSS Validator](https://jigsaw.w3.org/css-validator)
 
 * In the future I plan to implement automated tests.
 
@@ -78,7 +104,8 @@
 
 ##  First Time Visitor Goals
 
-
+* As a First Time Visitor, I want to easily understand the main purpose of the site
+* 
 
 
 ## Returning Visitor Goals
@@ -102,29 +129,49 @@
 ### Languages Used
 * HTML5
 * CSS3
-* Javascript
+* JQuery
+* Python
 
 ### Frameworks, Libraries & Programs Used
 
-1. Bootstrap 4.1.3:
+* Materialize:
     * Bootstrap was used to assist with the responsiveness and styling of the website.
-2. Photoshop:
+* Photoshop:
     * Photoshop was used to create the picture on the devices.
-3. Google Fonts:
-    * Google fonts were used to import the 'Titillium Web' font into the style.css file which is used on all pages throughout the project.
-4. GitHub:
+* Google Fonts:
+    * Google fonts were used to import the 'Montserrat' font into the style.css file which is used on all pages throughout the project.
+* GitHub:
     * GitHub is used to store the projects code after being pushed from Git.
-5. Git:
+* Git:
     * Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+* Gitpod:
+    * GitPod is used to develop the project.
+* MongoDB:
+    * MongoDB is the fully managed cloud database service used for the project.
+* Heroku:
+    * Heroki is the platform to deploying the app.
+* Flask:
+    * Flask is the web framework used to provide libraries, tools and technologies for the app.
+* Werkzeug:
+    * Werkzeug is used for password hashing and authentication and autohorization.
 
 ---
 
-# Code/Sources
+# Credits
 
 ## Content
 
+* On the home page i found a nice arrow with shows the visitors that theres more content on the page when you scroll down
+    * Creed to https://codepen.io/postor/pen/mskxI
+* The background image that i have on all pages
+    * https://pixabay.com/sv/photos/skrivbordet-white-flatlay-kontor-3820634/
+* On the Profile page Profile picture
+    * https://pixabay.com/sv/vectors/tom-profilbild-mysteriet-m%C3%A4nniskan-973460/
 
+## Acknowledgements
 
+* My Mentor for continuous helpful feedback.
+* Tutor support at Code Institute for their support.
 ---
 
 ## Deployment
