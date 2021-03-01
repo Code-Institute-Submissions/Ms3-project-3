@@ -84,7 +84,7 @@ def login():
 # Profile function
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
-    # Check username
+    # grab the session user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
@@ -165,3 +165,9 @@ if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
             debug=True)
+
+
+@app.errorhandler(404)
+def page_not_found(e):
+    # note that we set the 404 status explicitly
+    return render_template('404.html'), 404

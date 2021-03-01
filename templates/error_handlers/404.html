@@ -1,0 +1,20 @@
+<!-- Extends from home.html -->
+{% extends "home.html" %}
+{% block content %}
+
+    <!-- Header -->
+    <h1 class="profile-header white-text center-align">404 - Page not found</h1>
+
+    <!-- Background Image -->
+    <div class="main-image"></div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <h5 class="center-align">Sorry, the page you requested could not be found.</h5>
+                <h5 class="center-align"><a href="{{ url_for('Home') }}">Go to homepage</a></h5>
+            </div>       
+        </div> 
+    </div>
+
+{% endblock %}
