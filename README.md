@@ -67,7 +67,7 @@
         * If a user creates a new account, logs in or logs out, a flashed message will appear with the action the person has done.
 
 * Feature ideas to Implement
-    * Features to implement...
+    * The user can delete their profile.
 
 ---
 

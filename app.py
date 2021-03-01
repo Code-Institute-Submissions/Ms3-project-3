@@ -11,6 +11,7 @@ if os.path.exists("env.py"):
 
 app = Flask(__name__)
 
+
 # Configuration
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
@@ -159,6 +160,22 @@ def delete_note(note_id):
     mongo.db.notes.remove({"_id": ObjectId(note_id)})
     flash("Note Deleted!")
     return redirect(url_for("get_notes"))
+
+
+# Error Handlers
+@app.errorhandler(403)
+def forbidden(e):
+    return render_template("error_handlers/403.html"), 403
+
+
+@app.errorhandler(404)
+def not_found(e):
+    return render_template("error_handlers/404.html"), 404
+
+
+@app.errorhandler(500)
+def server_error(e):
+    return render_template("error_handlers/500.html"), 500
 
 
 if __name__ == "__main__":
