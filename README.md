@@ -68,6 +68,7 @@
 
 * Feature ideas to Implement
     * The user can delete their profile.
+    * Display a nice profile page for the user.
 
 ---
 
@@ -79,7 +80,7 @@
         * White color for the texts
 
 * ## Typography
-    * The Montserrat font is the main font used throughout the whole website with Sans Serif as the fallback font in case for any reason the font isn't being imported into the site correctly. Montserrat is a clean font used frequently in programming, so it is both attractive and appropriate.
+    * The Montserrat font is the main font used throughout the whole website. Montserrat is a clean font used frequently in programming, so it is both attractive and appropriate.
 
 * ## Wireframes 
 
@@ -162,11 +163,17 @@
 ## Content
 
 * On the home page i found a nice arrow with shows the visitors that theres more content on the page when you scroll down
-    * Creed to https://codepen.io/postor/pen/mskxI
+    * [Link - Codepen](https://codepen.io/postor/pen/mskxI)
 * The background image that i have on all pages
-    * https://pixabay.com/sv/photos/skrivbordet-white-flatlay-kontor-3820634/
+    * [Picture - Pixabay](https://pixabay.com/sv/photos/skrivbordet-white-flatlay-kontor-3820634/)
 * On the Profile page Profile picture
-    * https://pixabay.com/sv/vectors/tom-profilbild-mysteriet-m%C3%A4nniskan-973460/
+    * [Picture - Pixabay](https://pixabay.com/sv/vectors/tom-profilbild-mysteriet-m%C3%A4nniskan-973460/)
+* To display error handlers pages in a nice way i choose this picture
+    * [Picture - Pixabay](https://pixabay.com/sv/illustrations/bakgrund-r%C3%B6d-textur-sprickor-gamla-182474/)
+* The video i looked at to gte it right with the error handling
+    * [Video - Youtube](https://www.youtube.com/watch?v=mBKKZN1MMBM)
+* Icon i use in the header
+    * [Icon - Iconfinder](https://www.iconfinder.com/iconsets/office-222)
 
 ## Acknowledgements
 
