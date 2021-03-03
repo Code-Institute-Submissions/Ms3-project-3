@@ -99,6 +99,15 @@ def profile(username):
 # Find notes
 @app.route("/get_notes")
 def get_notes():
+
+    if session["user"]:
+        # Admin has acces to all notes
+        if session["user"] == "admin":
+            notes = mongo.db.notes.find()
+        else:
+            # user sees own notes
+            notes = mongo.db.notes.find({"created_by": session["user"]})
+
     notes = mongo.db.notes.find()
     return render_template("notes.html", notes=notes)
 
