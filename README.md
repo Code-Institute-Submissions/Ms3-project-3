@@ -75,20 +75,6 @@
 
 ---
 
-# Design
-
-* ## Colour Scheme
-    * ### The main colors i used for this website is:
-        * rgba(220, 106, 106, 1) a coral based color
-        * White color for the texts
-
-* ## Typography
-    * The Montserrat font is the main font used throughout the whole website. Montserrat is a clean font used frequently in programming, so it is both attractive and appropriate.
-
-* ## Wireframes 
-
----
-
 # Testing
 
 ### My methods for testing my webpage consisted of:
@@ -114,6 +100,9 @@
 
 ## Returning Visitor Goals
 
+* As a Returning Visitor, I want to come back and edit, create notes.
+* As a Returning Visitor, I want to find the best way to get in contact with the organisation with any questions I may have.
+* As a Returning Visitor, I want to find community links.
 
 ##  Frequent User Goals
 
@@ -131,10 +120,26 @@
 # Technologies
 
 ### Languages Used
-* HTML5
-* CSS3
-* JQuery
-* Python
+* [HTML5](https://sv.wikipedia.org/wiki/HTML5)
+* [CSS3](https://en.wikipedia.org/wiki/CSS)
+* [JQuery](https://sv.wikipedia.org/wiki/JQuery)
+* [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+
+### Design
+
+* #### Colour Scheme
+    * The two main colours used for my website is rgba coral, and white for the text.
+
+* #### Typography
+    * The Montserrat font is the main font used throughout the whole website. Montserrat is a clean font used frequently in programming, so it is both attractive and appropriate.
+
+* #### Imagery
+    * Imagery is important. The large, background hero image is designed to be striking and catch the user's attention. It also has a modern, energetic aesthetic.
+
+* #### Wireframes
+    * Home Page Wireframe
+    * Mobile Wireframe
+    * Contact Us Page Wireframe
 
 ### Frameworks, Libraries & Programs Used
 
