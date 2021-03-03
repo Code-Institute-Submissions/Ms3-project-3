@@ -36,7 +36,8 @@
 
     * As a First Time Visitor, I want to easily understand the main purpose of the site.
     * As a First Time Visitor, I want to be able to easily navigate throughout the site to find content.
-    * As a First Time Visitor
+    * As a First Time Visitor,I want to be able to visit the website on every device, so that I can look at the website on desktop, mobile and tablet.
+    * 
 
 * Returning Visitor Goals
     * As a Returning Visitor
@@ -65,10 +66,12 @@
         * User can login with their existing accounts.
         * User can easily log out.
         * If a user creates a new account, logs in or logs out, a flashed message will appear with the action the person has done.
+        * The password is saved in mongo db with a random password generated which make the password secury for the user.
 
-* Feature ideas to Implement
-    * The user can delete their profile.
-    * Display a nice profile page for the user.
+    * Feature ideas to Implement
+        * The user can delete their profile.
+        * Display a nice profile page for the user.
+        * Make a calender that you can put the notes in.
 
 ---
 
@@ -136,7 +139,7 @@
 ### Frameworks, Libraries & Programs Used
 
 * Materialize:
-    * Bootstrap was used to assist with the responsiveness and styling of the website.
+    * Materialize was used to assist with the responsiveness and styling of the website.
 * Photoshop:
     * Photoshop was used to create the picture on the devices.
 * Google Fonts:
@@ -170,65 +173,79 @@
     * [Picture - Pixabay](https://pixabay.com/sv/vectors/tom-profilbild-mysteriet-m%C3%A4nniskan-973460/)
 * To display error handlers pages in a nice way i choose this picture
     * [Picture - Pixabay](https://pixabay.com/sv/illustrations/bakgrund-r%C3%B6d-textur-sprickor-gamla-182474/)
-* The video i looked at to gte it right with the error handling
+* The video i looked at to get it right with the error handling
     * [Video - Youtube](https://www.youtube.com/watch?v=mBKKZN1MMBM)
 * Icon i use in the header
     * [Icon - Iconfinder](https://www.iconfinder.com/iconsets/office-222)
 
 ## Acknowledgements
 
+Thanks to the following people and organizations who helped or inspired me for the project:
+
 * My Mentor for continuous helpful feedback.
 * Tutor support at Code Institute for their support.
+* The lessons and knowledge of [Code Institute](https://codeinstitute.net/).
 ---
 
 ## Deployment
+--- 
+### Requirements
+* Python3
+* Github account
+* MongoDB account
+* Heroku account
 
-### GitHub Pages
+### Clone the project
+To make a local clone, follow the steps:
 
-The project was deployed to GitHub Pages using the following steps...
+1. Log in to GitHub and go to the repository.
+2. Click on the green button with the text “Code”.
+3. Click on “Open with GitHub Desktop” and follow the prompts in the GitHub Desktop Application or follow the instructions from [this link](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to see how to clone the repository in other ways.
 
-1. Log in to GitHub and locate the GitHub Repository
-2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
-* Alternatively Click Here for a GIF demonstrating the process starting from Step 2.
-3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
-4. Under "Source", click the dropdown called "None" and select "Master Branch".
-5. The page will automatically refresh.
-6. Scroll back down through the page to locate the now published site link in the "GitHub Pages" section.
+### Working with the local copy
 
-### Forking the GitHub Repository
+1. Install all the requirements: Go to the workspace of your local copy. In the terminal window of your IDE type: pip3 install -r requirements.txt.
+2. Create a database in MongoDB
+    * Signup or login to your MongoDB account.
+    * Create a cluster and a database.
+    * Create four collections in the db: categories, recipes, subscribers, users.
+    * Add string values for the collections.
+3. Create the environment variables
+    * Create a .gitignore file in the root directory of the project.
+    * Add the env.py file in the .gitignore.
+    * Create the file env.py. This will contain all the envornment variables.
+    
+            Import os
+            os.environ.setdefault("IP", "Added by developer")
+            os.environ.setdefault("PORT", "Added by developer")
+            os.environ.setdefault("SECRET_KEY", "Added by developer")
+            os.environ.setdefault("MONGO_URI", "Added by developer")
+            os.environ.setdefault("MONGO_DBNAME", "Added by developer")
+    
+4. Run the app: Open your terminal window in your IDE. Type python3 app.py and run the app.
 
-By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
+### Heroku Deployment
 
-1. Log in to GitHub and locate the GitHub Repository
-2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
-3. You should now have a copy of the original repository in your GitHub account.
+1. Set up local workspace for Heroku
+    * In terminal window of your IDE type: pip3 freeze -- local > requirements.txt. (The file is needed for Heroku to know which filed to install.)
+    * In termial window of your IDE type: python app.py > Procfile (The file is needed for Heroku to know which file is needed as entry point.)
+2. Set up Heroku: create a Heroku account and create a new app and select your region.
+3. Deployment method 'Github'
+    * Click on the Connect to GitHub section in the deploy tab in Heroku.
+        * Search your repository to connect with it.
+        * When your repository appears click on connect to connect your repository with the Heroku.
+    * Go to the settings app in Heroku and go to Config Vars. Click on Reveal Config Vars.
+        * Enter the variables contained in your env.py file. it is about: IP, PORT, SECRET_KEY, MONGO_URI, MONGO_DBNAME
+4. Push the requirements.txt and Procfile to repository.
 
-### Making a Local Clone
+        $ git add requirements.txt
+        $ git commit -m "Add requirements.txt"
 
-1. Log in to GitHub and locate the GitHub Repository
-2. Under the repository name, click "Clone or download".
-3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
-4. Open Git Bash
-5. Change the current working directory to the location where you want the cloned directory to be made.
-6. Type git clone, and then paste the URL you copied in Step 3.
+        $ git add Procfile 
+        $ git commit -m "Add Procfile"
+5. Automatic deployment: Go to the deploy tab in Heroku and scroll down to Aotmatic deployments. Click on Enable Automatic Deploys. By Manual deploy click on Deploy Branch.
 
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-
-### 7. Press Enter. Your local clone will be created.
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-
-> Cloning into `CI-Clone`...
-
-> remote: Counting objects: 10, done.
-
-> remote: Compressing objects: 100% (8/8), done.
-
-> remove: Total 10 (delta 1), reused 10 (delta 1)
-
-> Unpacking objects: 100% (10/10), done.
-
-Click Here to retrieve pictures for some of the buttons and more detailed explanations of the above process.
-
+- Heroku will receive the code from Github and host the app using the required packages. Click on Open app in the right corner of your Heroku account. The app wil open and the live link is available from the address bar.
 ---
 
 ## Contact

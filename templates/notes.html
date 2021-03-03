@@ -14,7 +14,7 @@
             <ul class="collapsible popout">
                 {% for note in notes %}
                     <!-- If the user that is logged in matches created_by -->
-                    {% if session.user|lower == note.created_by|lower or session.user|lower %}
+                    {% if session.user|lower == note.created_by|lower %}
                         <li>
                             <div class="collapsible-header">
                                 <i class="fas fa-chevron-down"></i>
