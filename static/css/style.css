@@ -213,6 +213,10 @@ nav .brand-logo {
     margin: 9px;
 }
 
+.switch {
+        font-size: 20px;
+}
+
 .collapsible-body {
     background-color: rgba(214, 81, 81, 0.49);
     border-bottom: none;

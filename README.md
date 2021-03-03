@@ -40,7 +40,7 @@
     * 
 
 * Returning Visitor Goals
-    * As a Returning Visitor
+    * As a Returning Visitor, I want to find the best way to get in contact with the creator with any questions I may have.
     * As a Returning Visitor
     * As a Returning Visitor
 
@@ -59,7 +59,7 @@
     
     * General
         * There are links to the social media platforms at the bottom of the website.
-        * 
+        * A contactform for people to contact me.
     
     * Register, login and logout
         * User can create a new account on the web application.
@@ -87,7 +87,6 @@
 * PEP8
     * The PEP8 validator is used to check whether there were any errors in the Python code.
 
-
 * In the future I plan to implement automated tests.
 
 ### Testing User Stories from UX Section
@@ -95,8 +94,11 @@
 ##  First Time Visitor Goals
 
 * As a First Time Visitor, I want to easily understand the main purpose of the site
-* 
-
+* When I visit this site for the first time, I want to be able to easily navigate throughout the site to find content.
+    - At the top of the page there is a navigation bar, each link describes what the page contents of.
+* When I visit this site for the first time, I want to get a professional presentation of the person which the site is created by.
+    - I've done a lot of bug testing to make sure that the user is left with a site that is well-working.
+    - I went for a clean look that doesn't contain irrelevant information or annoying colors and images.
 
 ## Returning Visitor Goals
 
@@ -112,8 +114,11 @@
 
 ### Screenshots
 
+![alternativetext](static/screenshots/Screen1.jpg)
 
+![alternativetext](static/screenshots/Screen2.jpg)
 
+![alternativetext](static/screenshots/Screen3.jpg)
 
 ---
 

@@ -11,7 +11,7 @@
     <div class="row">
         <form class="col s8 m8 offset-m2 offset-s2 card-panel" method="POST" action="{{ url_for('add_note') }}">
             <div class="row">
-                <div class="input-field col s8 m8 offset-m2 offset-s2">
+                <div class="input-field col s12 m8 offset-m2">
                 <i class="fas fa-user-circle prefix"></i>
                     <input id="note_name" name="note_name" minlength="5" maxlength="50"
                          type="text" class="validate" required>
@@ -20,7 +20,7 @@
             </div>
             <!-- Description -->
             <div class="row">
-                <div class="input-field col s8 m8 offset-m2 offset-s2">
+                <div class="input-field col s12 m8 offset-m2">
                     <i class="fas fa-align-left prefix"></i>
                     <textarea id="note_description" name="note_description" minlength="5"
                         maxlength="200" class="materialize-textarea validate" required></textarea>
@@ -29,7 +29,7 @@
             </div>
             <!-- Due Date -->
             <div class="row">
-                <div class="input-field col s8 m8 offset-m2 offset-s2">
+                <div class="input-field col s12 m8 offset-m2">
                 <i class="fas fa-calendar-alt prefix"></i>
                     <input id="due_date" name="due_date" type="text" class="datepicker validate" required>
                     <label for="due_date">Due Date</label>
@@ -37,13 +37,13 @@
             </div>
             <!-- Urgent -->
             <div class="row">
-                <div class="input-field col s8 m8 offset-m2 offset-s2">
+                <div class="input-field col s12 m8 offset-m2">
                       <div class="switch">
                         <i class="fas fa-exclamation-circle prefix"></i>
                         <label for="is_urgent">
                             <input type="checkbox" id="is_urgent" name="is_urgent">
                             <span class="lever"></span>
-                            Is Urgent
+                            Urgent
                         </label>
                     </div>
                 </div>
