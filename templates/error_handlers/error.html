@@ -1,0 +1,20 @@
+<!-- Extends from home.html -->
+{% extends "home.html" %}
+{% block content %}
+
+    <h2 class="profile-header white-text center-align">{{ error_title }}</h2>
+
+    <div class="err-container">
+	    <h1>{{ error_code }}</h1> 
+    </div>
+
+    <div class="error-container">
+        <div class="row">
+            <div class="col s12">
+                <h4 class="center-align white-text">{{ error_message }}</h4>
+                <h4 class="center-align white-text"><a href="{{ url_for('home') }}">Go to homepage</a></h4>
+            </div>       
+        </div> 
+    </div>
+
+{% endblock %}

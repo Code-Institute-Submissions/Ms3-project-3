@@ -5,6 +5,7 @@ from flask import (
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
+from werkzeug.exceptions import Forbidden
 if os.path.exists("env.py"):
     import env
 
@@ -19,17 +20,24 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
+ADMIN_USERNAME = "admin"
 
-# Home page
+
+
 @app.route("/")
 @app.route("/home")
 def home():
+    """
+    Display the static home page
+    """
     return render_template("home.html")
 
 
-# Register function
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    """
+    Register user if not already present in the DB
+    """
     if request.method == "POST":
         # check if username already exists in db
         existing_user = mongo.db.users.find_one(
@@ -48,6 +56,9 @@ def register():
         session["user"] = request.form.get("username").lower()
         flash("Register Successful!")
         return redirect(url_for("profile", username=session["user"]))
+    else:
+        if session.get("user"):  # is the user already logged in?
+            return redirect(url_for("profile", username=session["user"]))
 
     return render_template("register.html")
 
@@ -63,12 +74,12 @@ def login():
         if existing_user:
             # ensure hashed password matches user input
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
-                    flash("Welcome, {}".format(
-                        request.form.get("username")))
-                    return redirect(url_for(
-                        "profile", username=session["user"]))
+                    existing_user["password"], request.form.get("password")):
+                session["user"] = request.form.get("username").lower()
+                flash("Welcome, {}".format(
+                    request.form.get("username")))
+                return redirect(url_for(
+                    "profile", username=session["user"]))
             else:
                 # invalid password match
                 flash("Incorrect Username or Password")
@@ -78,6 +89,9 @@ def login():
             # username doesn't exist
             flash("Incorrect Username or Password")
             return redirect(url_for("login"))
+    else:
+        if session.get("user"):  # is the user already logged in?
+            return redirect(url_for("profile", username=session["user"]))
 
     return render_template("login.html")
 
@@ -99,25 +113,19 @@ def profile(username):
 # Find notes
 @app.route("/get_notes")
 def get_notes():
-
-    if session["user"]:
-        # Admin has acces to all notes
-        if session["user"] == "admin":
-            notes = mongo.db.notes.find()
-        else:
-            # user sees own notes
-            notes = mongo.db.notes.find({"created_by": session["user"]})
-
-    notes = mongo.db.notes.find()
-    return render_template("notes.html", notes=notes)
+    if session.get("user"):
+        # Admin has acces to all notes, user sees own notes
+        notes = mongo.db.notes.find() if session["user"] == ADMIN_USERNAME else mongo.db.notes.find({"created_by": session["user"]})
+        return render_template("notes.html", notes=notes)
+    return redirect(url_for("login"))
 
 
 # Logout function
 @app.route("/logout")
 def logout():
     # Remove user from session cookies
-    flash("You have been logged out")
-    session.pop("user")
+    if session.pop("user", None):
+        flash("You have been logged out")
     return redirect(url_for("login"))
 
 
@@ -141,25 +149,28 @@ def add_note():
     return render_template("add_notes.html")
 
 
+
 # Edit notes function
 @app.route("/edit_note/<note_id>", methods=["GET", "POST"])
 def edit_note(note_id):
-    # Post the strings to mongo db
-    if request.method == "POST":
-        is_urgent = "on" if request.form.get("is_urgent") else "off"
-        submit = {
-            "note_name": request.form.get("note_name"),
-            "note_description": request.form.get("note_description"),
-            "due_date": request.form.get("due_date"),
-            "is_urgent": is_urgent,
-            "created_by": session["user"]
-        }
-        # Update the strings in mongo db
-        mongo.db.notes.update({"_id": ObjectId(note_id)}, submit)
-        flash("Note Updated!")
-
+    # check if the user is the author of the note
     note = mongo.db.notes.find_one({"_id": ObjectId(note_id)})
-    return render_template("edit_note.html", note=note)
+    if note["created_by"] == session.get("user"):
+        # Post the strings to mongo db
+        if request.method == "POST":
+            is_urgent = "on" if request.form.get("is_urgent") else "off"
+            submit = {
+                "note_name": request.form.get("note_name"),
+                "note_description": request.form.get("note_description"),
+                "due_date": request.form.get("due_date"),
+                "is_urgent": is_urgent,
+                "created_by": session["user"]
+            }
+            # Update the strings in mongo db
+            mongo.db.notes.update({"_id": ObjectId(note_id)}, submit)
+            flash("Note Updated!")
+        return render_template("edit_note.html", note=note)
+    raise Forbidden()
 
 
 # Delete function
@@ -172,19 +183,30 @@ def delete_note(note_id):
 
 
 # Error Handlers
+@app.errorhandler(Exception)
+def generic_exception_handler(e):
+    print(e)
+    return render_template("error_handlers/error.html",
+                           **{"error_message": "Sorry, the page you requested could not be found.",
+                            "error_title": "Internal Server error",
+                            "error_code": 500}), 500
+
+
+# Error Handlers
 @app.errorhandler(403)
 def forbidden(e):
-    return render_template("error_handlers/403.html"), 403
+    return render_template("error_handlers/error.html",
+                           **{"error_message": "Sorry, the page you requested could not be found.",
+                            "error_title": "Permission not allowed",
+                            "error_code": 403}), 403
 
 
 @app.errorhandler(404)
 def not_found(e):
-    return render_template("error_handlers/404.html"), 404
-
-
-@app.errorhandler(500)
-def server_error(e):
-    return render_template("error_handlers/500.html"), 500
+    return render_template("error_handlers/error.html",
+                           **{"error_message": "Sorry, the page you requested could not be found.",
+                            "error_title": "Not Found",
+                            "error_code": 404}), 404
 
 
 if __name__ == "__main__":
