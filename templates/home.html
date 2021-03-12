@@ -53,8 +53,12 @@
             {% with messages = get_flashed_messages() %}
                 {% if messages %}
                     {% for message in messages %}
-                        <div class="row flashes">
-                            <h4 class="center-align white-text"><strong>{{ message }}</strong></h4>
+                        <div class="flash-container">
+                            <div class="row flashes">
+                                <div class="col s8 offset-s2">
+                                    <h4 class="center-align white-text"><strong>{{ message }}</strong></h4>
+                                </div>
+                            </div>
                         </div>
                     {% endfor %}
                 {% endif %}
@@ -107,16 +111,20 @@
             <div class="row">
                 <form class="col s8 m8 offset-m2 offset-s2 card-panel">
                     <div class="row">
-                        <div class="input-field col s6">
+                        <!-- First Name -->
+                        <div class="input-field col s12 l6">
                             <i class="fas fa-user-circle prefix"></i>
                             <input id="first_name" type="text" class="validate">
                             <label for="first_name">First Name</label>
                         </div>
-                        <div class="input-field col s6">
+                        <!-- Last Name -->
+                        <div class="input-field col s12 l6">
+                            <i class="fas fa-user-circle prefix"></i>
                             <input id="last_name" type="text" class="validate">
                             <label for="last_name">Last Name</label>
                         </div>
                     </div>
+                    <!-- Email -->
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="fas fa-envelope prefix"></i>
@@ -124,6 +132,7 @@
                             <label for="email">Email</label>
                         </div>
                     </div>
+                    <!-- Textarea -->
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="fas fa-align-left prefix"></i>
@@ -131,10 +140,11 @@
                             <label for="textarea1">Textarea</label>
                         </div>
                     </div>
+                    <!-- Send Button -->
                     <div class="row">
                         <div class="center-align send-btn">
                             <button id="general-btn" class="btn-large waves-effect" type="submit" name="action">
-                                Submit
+                                Send
                             </button>
                         </div>
                     </div>

@@ -189,6 +189,10 @@ nav .brand-logo {
     top: 100px;
 }
 
+.flash-container {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
 /* Form container */
 
 .form-container h2 {
