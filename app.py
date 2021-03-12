@@ -23,7 +23,6 @@ mongo = PyMongo(app)
 ADMIN_USERNAME = "admin"
 
 
-
 @app.route("/")
 @app.route("/home")
 def home():
@@ -147,7 +146,6 @@ def add_note():
         return redirect(url_for("get_notes"))
 
     return render_template("add_notes.html")
-
 
 
 # Edit notes function
