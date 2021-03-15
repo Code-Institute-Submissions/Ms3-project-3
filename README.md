@@ -171,32 +171,6 @@
 
 ---
 
-# Credits
-
-## Content
-
-* On the home page i found a nice arrow with shows the visitors that theres more content on the page when you scroll down
-    * [Link - Codepen](https://codepen.io/postor/pen/mskxI)
-* The background image that i have on all pages
-    * [Picture - Pixabay](https://pixabay.com/sv/photos/skrivbordet-white-flatlay-kontor-3820634/)
-* On the Profile page Profile picture
-    * [Picture - Pixabay](https://pixabay.com/sv/vectors/tom-profilbild-mysteriet-m%C3%A4nniskan-973460/)
-* To display error handlers pages in a nice way i choose this picture
-    * [Picture - Pixabay](https://pixabay.com/sv/illustrations/bakgrund-r%C3%B6d-textur-sprickor-gamla-182474/)
-* The video i looked at to get it right with the error handling
-    * [Video - Youtube](https://www.youtube.com/watch?v=mBKKZN1MMBM)
-* Icon i use in the header
-    * [Icon - Iconfinder](https://www.iconfinder.com/iconsets/office-222)
-
-## Acknowledgements
-
-Thanks to the following people and organizations who helped or inspired me for the project:
-
-* My Mentor for continuous helpful feedback.
-* Tutor support at Code Institute for their support.
-* The lessons and knowledge of [Code Institute](https://codeinstitute.net/).
----
-
 ## Deployment
 --- 
 ### Requirements
@@ -256,6 +230,32 @@ To make a local clone, follow the steps:
 5. Automatic deployment: Go to the deploy tab in Heroku and scroll down to Aotmatic deployments. Click on Enable Automatic Deploys. By Manual deploy click on Deploy Branch.
 
 - Heroku will receive the code from Github and host the app using the required packages. Click on Open app in the right corner of your Heroku account. The app wil open and the live link is available from the address bar.
+---
+
+# Credits
+
+## Content
+
+* On the home page i found a nice arrow with shows the visitors that theres more content on the page when you scroll down
+    * [Link - Codepen](https://codepen.io/postor/pen/mskxI)
+* The background image that i have on all pages
+    * [Picture - Pixabay](https://pixabay.com/sv/photos/skrivbordet-white-flatlay-kontor-3820634/)
+* On the Profile page Profile picture
+    * [Picture - Pixabay](https://pixabay.com/sv/vectors/tom-profilbild-mysteriet-m%C3%A4nniskan-973460/)
+* To display error handlers pages in a nice way i choose this picture
+    * [Picture - Pixabay](https://pixabay.com/sv/illustrations/bakgrund-r%C3%B6d-textur-sprickor-gamla-182474/)
+* The video i looked at to get it right with the error handling
+    * [Video - Youtube](https://www.youtube.com/watch?v=mBKKZN1MMBM)
+* Icon i use in the header
+    * [Icon - Iconfinder](https://www.iconfinder.com/iconsets/office-222)
+
+## Acknowledgements
+
+Thanks to the following people and organizations who helped or inspired me for the project:
+
+* My Mentor for continuous helpful feedback.
+* Tutor support at Code Institute for their support.
+* The lessons and knowledge of [Code Institute](https://codeinstitute.net/).
 ---
 
 ## Contact
