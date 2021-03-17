@@ -231,7 +231,7 @@ def delete_note(note_id):
 def generic_exception_handler(e):
     print(e)
     return render_template("error_handlers/error.html",
-                           **{"error_message": "Sorry, the page you requested could not be found.",
+                           **{"error_message": "The server does not support, or refuses to support, the major version of HTTP that was used in the request message.",
                             "error_title": "Internal Server error",
                             "error_code": 500}), 500
 
@@ -240,8 +240,8 @@ def generic_exception_handler(e):
 @app.errorhandler(403)
 def forbidden(e):
     return render_template("error_handlers/error.html",
-                           **{"error_message": "Sorry, the page you requested could not be found.",
-                            "error_title": "Permission not allowed",
+                           **{"error_message": "You don't have permisson to access on this server.",
+                            "error_title": "Forbidden",
                             "error_code": 403}), 403
 
 
