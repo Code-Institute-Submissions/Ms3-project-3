@@ -42,8 +42,8 @@
 
 * Returning Visitor Goals
     * As a Returning Visitor, I want to be able to edit, delete and create notes.
-    * As a Returning Visitor, I want to find the best way to get in contact with the creator with any questions I may have.
     * As a Returning Visitor, I want to know if a note is urgent or not.
+    * As a Returning Visitor, I want to find the best way to get in contact with the creator with any questions I may have.
 
 *  Frequent User Goals
     * As a Frequent Visitor, I want to make sure that an admin that can reach my notes and make changes if I for some reason cannot.
@@ -94,15 +94,15 @@
 
 ##  First Time Visitor Goals
 
+* As a First Time Visitor, I want to easily understand the main purpose of the site
+    - The name of the website is called "notebook". Indicitaing that this is website is about keeping notes.
+    - The background image for the whole page is of a workspace with a headline reading: "Keep an eye on what you should do". This is to signal visitors that the purpose of this site is to centralise and observe ones tasks.
 * As a First Time Visitor, I want to be able to easily navigate throughout the site to find content.
     - At the top of the page there is a navigation bar, each link describes what the page contents of.
-    - The user can always press on the "Home" link in the navigation bar or the "NB" icon to be redirected the homepage.
+    - If the user feels lost, he/she can always press on the "Home" link in the navigation bar or the "NB" icon to be redirected the homepage.
     - When there is content below the visible page there is a pulsating arrow pointing downwards to indicate there is more to show on this page.
-* As a First Time Visitor,I want to be able to visit the website on every device, so that I can look at the website on desktop, mobile and tablet.
+* As a First Time Visitor, I want to be able to visit the website on every device, so that I can look at the website on desktop, mobile and tablet.
     - The website is responsive on mobile, tablet and desktop.
-* As a First Time Visitor, I want to easily understand the main purpose of the site
-    - The background image for the whole page is of a workspace with a headline reading: "Keep an eye on what you should do.". Indicating that this page is used to observe ones tasks.
-    - The name of the website is called "notebook". Indicitaing that this is about keeping notes.
 * As a First Time Visitor, I want to it to be easy to register as a new user.
     - For first time users, or users who hasn't yet logged in, there is only three options in the top navigation bar; Home, Log in and Register. There is also a log in and reigster link in the center of the homepage.
 * As a First Time Visitor, I want to get a professional presentation of the site with no or very little bugs.
