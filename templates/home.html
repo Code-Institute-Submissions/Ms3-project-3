@@ -10,6 +10,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="icon" type="image/x-icon" href="../static/images/icon.png" />
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init("user_wezMwo0gacIqmeKDwVn98");
+    })();
+    </script>
     <title>NoteBook</title>
 </head>
     <body>
@@ -109,41 +117,35 @@
                 </div>
             </div>
             <div class="row">
-                <form class="col s8 m8 offset-m2 offset-s2 card-panel">
+                <form onsubmit="return sendMail(this);" class="col s8 m8 offset-m2 offset-s2 card-panel">
                     <div class="row">
-                        <!-- First Name -->
-                        <div class="input-field col s12 l6">
+                        <!-- Name -->
+                        <div class="input-field col s12 l8 offset-l2">
                             <i class="fas fa-user-circle prefix"></i>
-                            <input id="first_name" type="text" class="validate">
-                            <label for="first_name">First Name</label>
-                        </div>
-                        <!-- Last Name -->
-                        <div class="input-field col s12 l6">
-                            <i class="fas fa-user-circle prefix"></i>
-                            <input id="last_name" type="text" class="validate">
-                            <label for="last_name">Last Name</label>
+                            <input name="name" id="name" type="text" class="validate">
+                            <label for="name">Name</label>
                         </div>
                     </div>
                     <!-- Email -->
                     <div class="row">
-                        <div class="input-field col s12">
+                        <div class="input-field col s12 l8 offset-l2">
                             <i class="fas fa-envelope prefix"></i>
-                            <input id="email" type="email" class="validate">
+                            <input name="email" id="email" type="email" class="validate">
                             <label for="email">Email</label>
                         </div>
                     </div>
                     <!-- Textarea -->
                     <div class="row">
-                        <div class="input-field col s12">
+                        <div class="input-field col s12 l8 offset-l2">
                             <i class="fas fa-align-left prefix"></i>
-                            <textarea id="textarea1" class="materialize-textarea"></textarea>
-                            <label for="textarea1">Textarea</label>
+                            <textarea name="msg" id="msg" class="materialize-textarea"></textarea>
+                            <label for="msg">Textarea</label>
                         </div>
                     </div>
                     <!-- Send Button -->
                     <div class="row">
                         <div class="center-align send-btn">
-                            <button id="general-btn" class="btn-large waves-effect" type="submit" name="action">
+                            <button id="general-btn" class="btn-large waves-effect" type="submit">
                                 Send
                             </button>
                         </div>

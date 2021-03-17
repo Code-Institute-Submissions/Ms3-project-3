@@ -11,3 +11,20 @@
         }
     });
   });
+
+
+function sendMail(contactForm) {
+    emailjs.send("service_fyyclkx","Linus", {
+        "from_name": contactForm.name.value,
+        "from_email": contactForm.email.value,
+        "message": contactForm.msg.value
+    })
+    .then(
+        function(response) {
+            console.log("success", response);
+        },
+        function(error) {
+            console.log("error", error);
+        })
+    return false;
+}
