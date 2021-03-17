@@ -1,6 +1,6 @@
 # MS3-PROJECT-NoteBook
 
----
+![alternativetext](static/screenshots/devices.jpg)
 
 [View the live project here](https://ms3-project-to-do.herokuapp.com/)
 
@@ -54,6 +54,9 @@
 ## Features
 
 * Existing Features
+
+    * Responsive on all device sizes
+
     * Design
         * An attractive and simple layout.
         * Simple navigation throughout the website by using the navigation bar.
