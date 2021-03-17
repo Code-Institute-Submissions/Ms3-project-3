@@ -96,19 +96,35 @@
 * As a First Time Visitor, I want to easily understand the main purpose of the site
 * When I visit this site for the first time, I want to be able to easily navigate throughout the site to find content.
     - At the top of the page there is a navigation bar, each link describes what the page contents of.
-* When I visit this site for the first time, I want to get a professional presentation of the person which the site is created by.
+    - The user can always press on the "Home" link in the navigation bar or the "NB" icon to be redirected the homepage.
+    - When there is content below the visible page there is a pulsating arrow pointing downwards to indicate there is more to show on this page.
+* When I visit this site for the first time, I want to get a good understanding of what the page is about.
+    - The background image for the whole page is of a workspace with a headline reading: "Keep an eye on what you should do.". Indicating that this page is used to observe ones tasks.
+    - The name of the website is called "notebook". Indicitaing that this is about keeping notes.
+* When I visit this site for the first time, I want to it to be easy to register as a new user.
+    - For first time users, or users who hasn't yet logged in, there is only three options in the top navigation bar; Home, Log in and Register. There is also a log in and reigster link in the center of the homepage.
+* When I visit this site for the first time, I want to get a professional presentation of the site with no or very little bugs.
     - I've done a lot of bug testing to make sure that the user is left with a site that is well-working.
     - I went for a clean look that doesn't contain irrelevant information or annoying colors and images.
 
 ## Returning Visitor Goals
 
-* As a Returning Visitor, I want to come back and edit, create notes.
+* As a Returning Visitor, I want to be able to edit, delete and create notes.
+    - Notes can easily be created via a page that is reachable from the top navigation bar, called "new note". Here users can set note "name", description, due date and if it's urgent.
+    - Each note can be edited or deleted by opening the note via the "notes" page. 
+* As a Returning Visitor, I want to know if a note is urgent or not.
+    - Each note has the possibility to enable an urgent mark to indicate that this particular note needs to be adressed very soon. The urgent mark will show next to note without having to open it.
 * As a Returning Visitor, I want to find the best way to get in contact with the organisation with any questions I may have.
-* As a Returning Visitor, I want to find community links.
+    - At the bottom of the homepage there is contact form which the user can use to get in contact with the creator of the page.
 
 ##  Frequent User Goals
 
-
+* As a Frequent Visitor, I want to make sure that an admin that can reach my notes and make changes if I for some reason cannot.
+    - There is a Admin login that holds all notes created. Here he or she can edit or remove every single note.
+* As a Frequent Visitor, I want a profile page that I can edit.
+    - There is a profile page that in the future could hold an image as a profile picture.
+* As a Frequent Visitor, I want to find community links so that I can join and interact with others.
+    - The Facebook, Instagram and Twitter page can be found at the bottom of the homepage. The community links is not enabled since there is no community yet.
 
 ## Here is some examples of bugs that I encounterd during testing:
 

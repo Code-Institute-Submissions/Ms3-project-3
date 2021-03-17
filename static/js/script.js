@@ -21,10 +21,13 @@ function sendMail(contactForm) {
     })
     .then(
         function(response) {
-            console.log("success", response);
+            document.getElementById("contact-form").reset();
+            alert("success", response);
+            
         },
         function(error) {
             console.log("error", error);
         })
     return false;
 }
+

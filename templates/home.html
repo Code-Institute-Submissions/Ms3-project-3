@@ -25,7 +25,7 @@
         <!-- Navigation -->
             <nav id="navbar">
                 <div class="nav-wrapper">
-                    <a href="{{ url_for('home') }}" class="brand-logo"><strong>NoteBook</strong></a>
+                    <a href="{{ url_for('home') }}" class="brand-logo"><strong>NB.</strong></a>
                     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
                     <ul class="right hide-on-med-and-down">
                         <li><a href="{{ url_for('home') }}"><strong>Home</strong></a></li>
@@ -117,7 +117,7 @@
                 </div>
             </div>
             <div class="row">
-                <form onsubmit="return sendMail(this);" class="col s8 m8 offset-m2 offset-s2 card-panel">
+                <form onsubmit="return sendMail(this);" id="contact-form" class="col s8 m8 offset-m2 offset-s2 card-panel">
                     <div class="row">
                         <!-- Name -->
                         <div class="input-field col s12 l8 offset-l2">
@@ -145,7 +145,7 @@
                     <!-- Send Button -->
                     <div class="row">
                         <div class="center-align send-btn">
-                            <button id="general-btn" class="btn-large waves-effect" type="submit">
+                            <button onclick="clearField()" id="general-btn" class="btn-large waves-effect" type="submit">
                                 Send
                             </button>
                         </div>
