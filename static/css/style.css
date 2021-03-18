@@ -68,17 +68,17 @@ nav .brand-logo {
     margin-right: 10px;
 }
 
-.regBtn-container button {
+.loginBtn-container button, .regBtn-container button {
     background-color: rgba(214, 81, 81, 1);
-    border-radius: 10%;
-    font-size: 20px;
+    border-radius: 2%;
+    font-size: 16px;
     font-family: "Montserrat";
 }
 
 #general-btn {
     background-color: rgba(214, 81, 81, 1);
-    border-radius: 10%;
-    font-size: 20px;
+    border-radius: 2%;
+    font-size: 16px;
     font-family: "Montserrat";
 }
 
@@ -225,7 +225,7 @@ nav .brand-logo {
     background-color: white;
 }
 
-.register-container p {
+.regBtn-container p, .loginBtn-container p {
     font-size: 30px;
 }
 

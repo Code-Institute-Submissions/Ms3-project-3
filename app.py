@@ -142,7 +142,10 @@ def get_notes():
         """
         Admin has acces to all notes, user sees own notes
         """
-        notes = mongo.db.notes.find() if session["user"] == ADMIN_USERNAME else mongo.db.notes.find({"created_by": session["user"]})
+        if session["user"] == ADMIN_USERNAME:
+            notes = mongo.db.notes.find()
+        else:
+            notes =  mongo.db.notes.find({"created_by": session["user"]})
         return render_template("notes.html", notes=notes)
     return redirect(url_for("login"))
 
@@ -187,7 +190,12 @@ def edit_note(note_id):
     check if the user is the author of the note
     """
     note = mongo.db.notes.find_one({"_id": ObjectId(note_id)})
-    if note["created_by"] == session.get("user"):
+    if session["user"]:
+        # Admin has acces to all recipes
+        if session["user"] == ADMIN_USERNAME:
+            notes = mongo.db.notes.find()
+        else:
+            notes =  mongo.db.notes.find({"created_by": session["user"]})
         """
         Post the strings to mongo db
         """
@@ -216,7 +224,12 @@ def delete_note(note_id):
     check if the user is the author of the note
     """
     note = mongo.db.notes.find_one({"_id": ObjectId(note_id)})
-    if note["created_by"] == session.get("user"):
+    if session["user"]:
+        # Admin has acces to all recipes
+        if session["user"] == ADMIN_USERNAME:
+            notes = mongo.db.notes.find()
+        else:
+            notes = mongo.db.notes.find({"created_by": session["user"]})
         """
         Remove ObjectId from mongo db
         """
