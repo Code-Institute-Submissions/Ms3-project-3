@@ -191,7 +191,9 @@ def edit_note(note_id):
     """
     note = mongo.db.notes.find_one({"_id": ObjectId(note_id)})
     if session["user"]:
-        # Admin has acces to all recipes
+        """
+        Admin has acces to all notes
+        """
         if session["user"] == ADMIN_USERNAME:
             notes = mongo.db.notes.find()
         else:
@@ -225,7 +227,9 @@ def delete_note(note_id):
     """
     note = mongo.db.notes.find_one({"_id": ObjectId(note_id)})
     if session["user"]:
-        # Admin has acces to all recipes
+        """
+        Admin has access to delete notes
+        """
         if session["user"] == ADMIN_USERNAME:
             notes = mongo.db.notes.find()
         else:

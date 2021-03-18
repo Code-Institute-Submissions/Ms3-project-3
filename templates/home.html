@@ -9,7 +9,9 @@
     <!-- Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Icon -->
     <link rel="icon" type="image/x-icon" href="../static/images/icon.png" />
+    <!-- script for emailjs -->
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
     </script>
@@ -102,24 +104,25 @@
         <!-- Main Headline Image -->
         <div class="main-image"></div>
 
-        <!-- https://codepen.io/postor/pen/mskxI -->
+        <!-- arrows on home page from https://codepen.io/postor/pen/mskxI -->
         <svg class="arrows">
             <path class="a1" d="M0 0 L30 32 L60 0"></path>
             <path class="a2" d="M0 20 L30 52 L60 20"></path>
             <path class="a3" d="M0 40 L30 72 L60 40"></path>
         </svg>
 
-        <!-- Contact Form -->
+        <!-- Contact Form Header -->
         <section class="form-container">
             <div class="row">
                 <div class=" col m12 s8 offset-s2 center-align">
                     <h2><i class="fas fa-paper-plane"></i> Contact Me</h2>
                 </div>
             </div>
+            <!-- Contact Form -->
             <div class="row">
                 <form onsubmit="return sendMail(this);" id="contact-form" class="col s8 m8 offset-m2 offset-s2 card-panel">
+                    <!-- Name -->
                     <div class="row">
-                        <!-- Name -->
                         <div class="input-field col s12 l8 offset-l2">
                             <i class="fas fa-user-circle prefix"></i>
                             <input name="name" id="name" type="text" class="validate" required>

@@ -104,6 +104,8 @@ nav .brand-logo {
     box-sizing: border-box;
 }
 
+/* Error handlers */
+
 .err-container {
     position: absolute;
     top: 0;
@@ -116,6 +118,7 @@ nav .brand-logo {
     justify-content: center;
     z-index: -1;
 }
+
 .err-container h1 {
     color: #fcdddd;
     font-family: "Inter", sans-serif;
@@ -131,17 +134,9 @@ nav .brand-logo {
     top: 0;
     position: absolute;
     z-index: -1;
-    /*background: url(../images/background-red.jpg);*/
 }
 
-.notes-img {
-    height: 100%;
-    width: 100%;
-    background-repeat: no-repeat;
-    position: absolute;
-    z-index: -1;
-    background: url(../images/book.jpg);
-}
+/* Profile image */
 
 .profile-img {
     height: 100%;
@@ -157,7 +152,7 @@ nav .brand-logo {
     border-radius: 50%;
 }
 
-/* Header */
+/* Headers */
 
 .header-container p {
     position: relative;
@@ -182,7 +177,7 @@ nav .brand-logo {
     font-size: 20px;
 }
 
-/* Flashes */
+/* Flash messages */
 
 .flashes h4 {
     line-height: 2;

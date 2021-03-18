@@ -12,7 +12,7 @@
     });
   });
 
-
+// function for contactform
 function sendMail(contactForm) {
     emailjs.send("service_fyyclkx","Linus", {
         "from_name": contactForm.name.value,

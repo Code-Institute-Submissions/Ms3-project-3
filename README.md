@@ -4,7 +4,6 @@
 
 [View the live project here](https://ms3-project-to-do.herokuapp.com/)
 
-
 ---
 
 # Table of contents
