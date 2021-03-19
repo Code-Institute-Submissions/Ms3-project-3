@@ -75,6 +75,7 @@
         * The user can delete their profile.
         * Display a nice profile page for the user.
         * Make a calender that you can put the notes in.
+        * Make a public switch so you can choose if you want your notes to be public or private.
 
 ---
 
@@ -268,6 +269,10 @@ To make a local clone, follow the steps:
     * [Video - Youtube](https://www.youtube.com/watch?v=mBKKZN1MMBM)
 * Icon i use in the header
     * [Icon - Iconfinder](https://www.iconfinder.com/iconsets/office-222)
+* The 3D text i used for the error handling page.
+    * [3D text - Codepen](https://codepen.io/havardob/pen/WNQwvze)
+* I used this site to transform scss to css from the link above.
+    * [Css to Scss - Cssportal](https://www.cssportal.com/scss-to-css/)
 
 ## Acknowledgements
 

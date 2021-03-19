@@ -195,9 +195,9 @@ def edit_note(note_id):
         Admin has acces to all notes
         """
         if session["user"] == ADMIN_USERNAME:
-            notes = mongo.db.notes.find()
+            mongo.db.notes.find()
         else:
-            notes =  mongo.db.notes.find({"created_by": session["user"]})
+            mongo.db.notes.find({"created_by": session["user"]})
         """
         Post the strings to mongo db
         """
@@ -225,15 +225,15 @@ def delete_note(note_id):
     """
     check if the user is the author of the note
     """
-    note = mongo.db.notes.find_one({"_id": ObjectId(note_id)})
+    mongo.db.notes.find_one({"_id": ObjectId(note_id)})
     if session["user"]:
         """
         Admin has access to delete notes
         """
         if session["user"] == ADMIN_USERNAME:
-            notes = mongo.db.notes.find()
+            mongo.db.notes.find()
         else:
-            notes = mongo.db.notes.find({"created_by": session["user"]})
+            mongo.db.notes.find({"created_by": session["user"]})
         """
         Remove ObjectId from mongo db
         """

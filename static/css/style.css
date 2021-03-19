@@ -38,6 +38,26 @@ nav .brand-logo {
     color: white;
 }
 
+/* Sidenav */
+
+.sidenav {
+    background-color: rgba(214, 81, 81, 0.7);
+}
+
+.sidenav li a {
+    color: white;
+    font-size: 24px;
+}
+
+.sidenav li {
+    line-height: 2px;
+    padding: 10px;
+}
+
+.sidenav li a:hover {
+    background-color: rgba(214, 81, 81, 1);
+}
+
 /* Home Page */
 
 .h2-front {
@@ -185,7 +205,7 @@ nav .brand-logo {
 }
 
 .flash-container {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 /* Form container */
