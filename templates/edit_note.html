@@ -58,11 +58,9 @@
                 <!-- "Cancel" and "Edit Note" Buttons -->
                 <div class="row">
                     <div class="col s12 m8 offset-m2 center-align">
-                        <button id="cancel-btn" class="btn waves-effect waves-light">
-                            <a class="white-text" href="{{ url_for('get_notes') }}">
-                                Cancel 
-                            </a>
-                        </button>
+                        <a id="cancel-btn" class="white-text btn waves-effect waves-light" href="{{ url_for('get_notes') }}">
+                            Cancel 
+                        </a>
                         <button id="edit-btn" class="btn waves-effect waves-light" type="submit">
                             Edit
                         </button>

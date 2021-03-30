@@ -34,8 +34,6 @@ def home():
 """
 Register function
 """
-
-
 @app.route("/register", methods=["GET", "POST"])
 def register():
     # Register user if not already present in the DB
@@ -67,8 +65,6 @@ def register():
 """
 Login function
 """
-
-
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -105,8 +101,6 @@ def login():
 """
 Profile function
 """
-
-
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     # grab the session user's username from db
@@ -122,8 +116,6 @@ def profile(username):
 """
 Find notes
 """
-
-
 @app.route("/get_notes")
 def get_notes():
     if session.get("user"):
@@ -139,8 +131,6 @@ def get_notes():
 """
 Logout function
 """
-
-
 @app.route("/logout")
 def logout():
     # Remove user from session cookies
@@ -152,8 +142,6 @@ def logout():
 """
 Add notes funtion
 """
-
-
 @app.route("/add_note", methods=["GET", "POST"])
 def add_note():
     # Post the strings to mongo db
@@ -176,8 +164,6 @@ def add_note():
 """
 Edit notes function
 """
-
-
 @app.route("/edit_note/<note_id>", methods=["GET", "POST"])
 def edit_note(note_id):
     # check if the user is the author of the note
@@ -208,8 +194,6 @@ def edit_note(note_id):
 """
 Delete function
 """
-
-
 @app.route("/delete_note/<note_id>")
 def delete_note(note_id):
     # check if the user is the author of the note
@@ -230,8 +214,6 @@ def delete_note(note_id):
 """
 Error Handlers
 """
-
-
 @app.errorhandler(Exception)
 def generic_exception_handler(e):
     print(e)
