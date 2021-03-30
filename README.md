@@ -135,11 +135,11 @@
 
 ### Screenshots
 
-![alternativetext](static/screenshots/Screen1.jpg)
+Screenshot of Bug1 - [View](static/files/bugs/Screen1.jpg)
 
-![alternativetext](static/screenshots/Screen2.jpg)
+Screenshot of Bug2 - [View](static/files/bugs/Screen2.jpg)
 
-![alternativetext](static/screenshots/Screen3.jpg)
+Screenshot of Bug3 - [View](static/files/bugs/Screen3.jpg)
 
 ---
 
@@ -163,9 +163,10 @@
     * Imagery is important. The large, background hero image is designed to be striking and catch the user's attention. It also has a modern, energetic aesthetic.
 
 * #### Wireframes
-    * Home Page Wireframe
-    * Mobile Wireframe
-    * Contact Us Page Wireframe
+    * Wireframe Home Page - [View](static/files/wireframes/Homepage.jpg)
+    * Wireframe Login and Register page - [View](static/files/wireframes/loginRegister.jpg)
+    * Wireframe New Note page - [View](static/files/wireframes/Newnote.jpg)
+    * Wireframe Profile and Notes page - [Veiw](static/files/wireframes/Profilepage.jpg)
 
 ### Frameworks, Libraries & Programs Used
 
