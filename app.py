@@ -72,9 +72,12 @@ def register():
     return render_template("register.html")
 
 
-# Login function
+
 @app.route("/login", methods=["GET", "POST"])
 def login():
+    """
+    Login function
+    """
     if request.method == "POST":
         """
         check if username exists in db
@@ -116,11 +119,11 @@ def login():
     return render_template("login.html")
 
 
-# Profile function
+
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     """
-    grab the session user's username from db
+    Profile function, grab the session user's username from db
     """
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
@@ -135,9 +138,12 @@ def profile(username):
     return redirect(url_for("login"))
 
 
-# Find notes
+
 @app.route("/get_notes")
 def get_notes():
+    """
+    Find notes
+    """
     if session.get("user"):
         """
         Admin has acces to all notes, user sees own notes
@@ -145,27 +151,27 @@ def get_notes():
         if session["user"] == ADMIN_USERNAME:
             notes = mongo.db.notes.find()
         else:
-            notes =  mongo.db.notes.find({"created_by": session["user"]})
+            notes = mongo.db.notes.find({"created_by": session["user"]})
         return render_template("notes.html", notes=notes)
     return redirect(url_for("login"))
 
 
-# Logout function
+
 @app.route("/logout")
 def logout():
     """
-    Remove user from session cookies
+    Logout function, Remove user from session cookies
     """
     if session.pop("user", None):
         flash("You have been logged out")
     return redirect(url_for("login"))
 
 
-# Add notes funtion
+
 @app.route("/add_note", methods=["GET", "POST"])
 def add_note():
     """
-    Post the strings to mongo db
+    Add notes funtion, Post the strings to mongo db
     """
     if request.method == "POST":
         is_urgent = "on" if request.form.get("is_urgent") else "off"
@@ -183,11 +189,11 @@ def add_note():
     return render_template("add_notes.html")
 
 
-# Edit notes function
+
 @app.route("/edit_note/<note_id>", methods=["GET", "POST"])
 def edit_note(note_id):
     """
-    check if the user is the author of the note
+    Edit notes function, check if the user is the author of the note
     """
     note = mongo.db.notes.find_one({"_id": ObjectId(note_id)})
     if session["user"]:
@@ -219,11 +225,11 @@ def edit_note(note_id):
     raise Forbidden()
 
 
-# Delete function
+
 @app.route("/delete_note/<note_id>")
 def delete_note(note_id):
     """
-    check if the user is the author of the note
+    Delete function, check if the user is the author of the note
     """
     mongo.db.notes.find_one({"_id": ObjectId(note_id)})
     if session["user"]:
@@ -243,9 +249,12 @@ def delete_note(note_id):
     raise Forbidden()
 
 
-# Error Handlers
+
 @app.errorhandler(Exception)
 def generic_exception_handler(e):
+    """
+    Error Handlers
+    """
     print(e)
     return render_template("error_handlers/error.html",
                            **{"error_message": "The server does not support, or refuses to support, the major version of HTTP that was used in the request message.",
@@ -253,9 +262,12 @@ def generic_exception_handler(e):
                             "error_code": 500}), 500
 
 
-# Error Handlers
+
 @app.errorhandler(403)
 def forbidden(e):
+    """
+    Error Handlers
+    """
     return render_template("error_handlers/error.html",
                            **{"error_message": "You don't have permisson to access on this server.",
                             "error_title": "Forbidden",

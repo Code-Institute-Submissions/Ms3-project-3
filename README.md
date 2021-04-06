@@ -15,6 +15,7 @@
 * [Design](#design)
 * [Testing](#testing)
 * [Technologies](#technologies)
+* [DB Scheme](#DBScheme)
 * [Credits](#credits)
 * [Deployment](#deployment)
 * [Contact](#Contact)
@@ -189,6 +190,22 @@
     * Flask is the web framework used to provide libraries, tools and technologies for the app.
 * Werkzeug:
     * Werkzeug is used for password hashing and authentication and autohorization.
+
+---
+
+## DB Scheme
+
+    to_do collections {
+        notes:
+            note_name: 
+            note_description:
+            due_date:
+            is_urgent:
+            created_by:
+        users:
+            username:
+            password:
+    }
 
 ---
 
