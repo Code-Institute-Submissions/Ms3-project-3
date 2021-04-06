@@ -1,6 +1,6 @@
 # MS3-PROJECT-NoteBook
 
-![alternativetext](static/screenshots/devices.jpg)
+![alternativetext](static/images/devices.jpg)
 
 [View the live project here](https://ms3-project-to-do.herokuapp.com/)
 
@@ -134,13 +134,17 @@
 
 ## Here is some examples of bugs that I encounterd during testing:
 
-### Screenshots
 
-![alternativetext](static/screenshots/Screen1.jpg)
+#### This is a selection of screenshots of bugs that are now fixed.
 
-![alternativetext](static/screenshots/Screen2.jpg)
+* In this first picture the urgent text and icon was not aligned with the rest. This happened only on smaller screens. By making the form wider and setting the font-size to a smaller one, the aligment issue was fixed. 
+    * Screenshot of Bug1 - [View](static/files/bugs/Screen1.jpg)
 
-![alternativetext](static/screenshots/Screen3.jpg)
+* In this bug the buttons for the edit screen was misplaced. The issue here was similar to the previous bug. By making the font-size smaller and shorten the "edit note" to only "edit", the buttons aligned better.
+    * Screenshot of Bug2 - [View](static/files/bugs/Screen2.jpg)
+
+* In this last bug the arrows that point downwards to indicates more space below, was too far up and merging with the nearby buttons. This was also an issue that was only found in smaller screens. By adding a top margin in css the arrows was properly placed.
+    * Screenshot of Bug3 - [View](static/files/bugs/Screen3.jpg)
 
 ---
 
@@ -164,9 +168,10 @@
     * Imagery is important. The large, background hero image is designed to be striking and catch the user's attention. It also has a modern, energetic aesthetic.
 
 * #### Wireframes
-    * Home Page Wireframe
-    * Mobile Wireframe
-    * Contact Us Page Wireframe
+    * Wireframe Home Page - [View](static/files/wireframes/Homepage.jpg)
+    * Wireframe Login and Register page - [View](static/files/wireframes/loginRegister.jpg)
+    * Wireframe New Note page - [View](static/files/wireframes/Newnote.jpg)
+    * Wireframe Profile and Notes page - [Veiw](static/files/wireframes/Profilepage.jpg)
 
 ### Frameworks, Libraries & Programs Used
 
