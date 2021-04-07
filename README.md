@@ -8,23 +8,16 @@
 
 # Table of contents
 
-* [Inspiration](#Inspiration)
-* [UX](#UX)
+* [UX](#ux)
 * [Features](#features)
 * [Screenshots](#screenshots)
 * [Design](#design)
-* [Testing](#testing)
 * [Technologies](#technologies)
-* [DB Scheme](#DBScheme)
-* [Credits](#credits)
+* [DB Schema](#db)
+* [Testing](#testing)
 * [Deployment](#deployment)
-* [Contact](#Contact)
-
----
-
-## Inspiration
-
-
+* [Credits](#credits)
+* [Contact](#contact)
 
 ---
 
@@ -80,21 +73,7 @@
 
 ---
 
-# Testing
-
-### My methods for testing my webpage consisted of:
-
-* Chrome DevTools is used to detect problems and test responsiveness.
-* W3C Markup Validation Service
-    * The W3C Markup Validation Service is used to check whether there were any errors in the HTML5 code.
-* W3C CSS validator
-    * The W3C CSS validator is used to check whether there were any errors in the CSS3 code.
-* PEP8
-    * The PEP8 validator is used to check whether there were any errors in the Python code.
-
-* In the future I plan to implement automated tests.
-
-### Testing User Stories from UX Section
+## Testing User Stories from UX Section
 
 ##  First Time Visitor Goals
 
@@ -198,19 +177,35 @@
 
 ---
 
-## DB Scheme
+## DB Schema
 
-    to_do collections {
-        notes:
-            note_name: 
-            note_description:
-            due_date:
-            is_urgent:
-            created_by:
-        users:
-            username:
-            password:
-    }
+    Collections
+        notes {
+            note_name: str
+            note_description: str
+            due_date: date
+            is_urgent: bool
+            created_by: user
+        }
+        users{
+            username: str
+            password: str
+        }
+---
+
+# Testing
+
+### My methods for testing my webpage consisted of:
+
+* Chrome DevTools is used to detect problems and test responsiveness.
+* W3C Markup Validation Service
+    * The W3C Markup Validation Service is used to check whether there were any errors in the HTML5 code.
+* W3C CSS validator
+    * The W3C CSS validator is used to check whether there were any errors in the CSS3 code.
+* PEP8
+    * The PEP8 validator is used to check whether there were any errors in the Python code.
+
+* In the future I plan to implement automated tests.
 
 ---
 
