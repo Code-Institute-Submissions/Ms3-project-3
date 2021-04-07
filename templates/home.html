@@ -12,10 +12,9 @@
     <!-- Icon -->
     <link rel="icon" type="image/x-icon" href="../static/images/icon.png" />
     <!-- script for emailjs -->
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
     </script>
-    <script type="text/javascript">
+    <script>
     (function(){
         emailjs.init("user_wezMwo0gacIqmeKDwVn98");
     })();
@@ -94,9 +93,9 @@
         <!-- Main Headline Buttons -->
         <div class="btn-container">
             <div class="row">
-                <div id="btn-home" class="col s12 center-align">
-                    <a href="{{ url_for('login') }}" id="btn-hover" class="waves-effect waves-light btn-large">Log In</a>
-                    <a href="{{ url_for('register') }}" id="btn-hover" class="waves-effect waves-light btn-large">Register</a>
+                <div class="col s12 center-align btn-container">
+                    <a href="{{ url_for('login') }}" class="waves-effect waves-light btn-large btn-hover">Log In</a>
+                    <a href="{{ url_for('register') }}" class="waves-effect waves-light btn-large btn-hover">Register</a>
                 </div>
             </div>
         </div>

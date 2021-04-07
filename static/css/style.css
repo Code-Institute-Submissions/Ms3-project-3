@@ -80,7 +80,16 @@ nav .brand-logo {
     font-size: 16px;
 }
 
+.login-container button,
+.register-container button {
+    background-color: rgba(214, 81, 81, 1);
+}
+
 #btn-hover:hover {
+    background-color: rgba(214, 81, 81, 0.4);
+}
+
+.btn-hover:hover {
     background-color: rgba(214, 81, 81, 0.4);
 }
 
